@@ -7,7 +7,7 @@ namespace StrategyTemplate.EntryPoint
         public string Exchange => throw new System.NotImplementedException();
         public string MarketPair => throw new System.NotImplementedException();
 
-        public Verdict GetStrategiesVerdict(GraphBar currentTicker)
+        public Verdict GetStrategiesVerdict(IGraphBar currentTicker)
         {
             throw new System.NotImplementedException();
         }

@@ -66,7 +66,7 @@ namespace StrategyTemplate.Documentation
             typeof(System.Text.RegularExpressions.Regex).Namespace,
             typeof(System.Globalization.Calendar).Namespace,
             typeof(StrategyTemplate.ForYou.Verdict).Namespace,
-            //typeof(TicTacTec.TA.Library.Core).Namespace //waiting for internet access
+            //typeof(TicTacTec.TA.Library.Core).Namespace //waiting for internet access)
         };
     }
 }

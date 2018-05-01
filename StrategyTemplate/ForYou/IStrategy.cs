@@ -4,6 +4,6 @@
     {
         string Exchange {get;}
         string MarketPair {get;}
-        Verdict GetStrategiesVerdict(GraphBar currentTicker);
+        Verdict GetStrategiesVerdict(IGraphBar currentTicker);
     }
 }
