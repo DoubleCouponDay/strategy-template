@@ -55,6 +55,9 @@ namespace StrategyTemplate.Documentation
             typeof(BitConverter), 
             typeof(Random),
             typeof(Convert), 
+            typeof(IList<>),
+            typeof(IEnumerable<>),
+            typeof(IEnumerator<>)
         };
 
         public static HashSet<string> Namespaces = new HashSet<string> {
@@ -66,7 +69,8 @@ namespace StrategyTemplate.Documentation
             typeof(System.Text.RegularExpressions.Regex).Namespace,
             typeof(System.Globalization.Calendar).Namespace,
             typeof(StrategyTemplate.ForYou.Verdict).Namespace,
-            //typeof(TicTacTec.TA.Library.Core).Namespace //waiting for internet access)
+            typeof(StrategyTemplate.ForYou.Indicators.Iindicators).Namespace,
+            typeof(StrategyTemplate.ForYou.Indicators.Groups.ICycles).Namespace,
         };
     }
 }

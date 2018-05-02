@@ -7,9 +7,9 @@ using TicTacTec.TA.Library;
 
 namespace StrategyTemplate.ForYou.Indicators
 {
-    public interface ITaLibOutput <T1>
+    public interface ITaLibOutput <TOutputSeries>
     {
-        T1 ValueTuple {get;}
+        TOutputSeries Series {get;}
         Core.RetCode Outcome {get;} 
         int BeginningIndex {get;}
     }
