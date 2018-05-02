@@ -1,7 +1,3 @@
 StrategyTemplate/bin/
 StrategyTemplate/obj/
-.vs/TemplateStrategy/v15/Server/sqlite3/storage.ide
-.vs/TemplateStrategy/v15/Server/sqlite3/db.lock
-packages/
-
-.vs/
+#.vs/

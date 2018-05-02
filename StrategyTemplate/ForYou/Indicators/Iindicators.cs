@@ -29,6 +29,6 @@ namespace StrategyTemplate.ForYou.Indicators
         /// </summary>
         /// <param name="historyIsCustom"></param>
         /// <param name="history"></param>
-        void SetManualHistoryToggle(bool historyIsCustom, int startingIndex = 0, IList<double> history = null);
+        void SetManualHistoryToggle(bool historyIsCustom, int startingIndex = 0, double[] history = null);
     }
 }
