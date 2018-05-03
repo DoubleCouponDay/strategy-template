@@ -10,9 +10,7 @@ namespace StrategyTemplate.ForYou.Indicators
 {
     public interface Iindicators
     {
-        IList<double> CurrentHistory {get;}
-        bool HistorySetManually {get;}
-        int StartingIndex {get;}
+        IList<IGraphBar> CurrentHistory {get;}
 
         ICycles Cycles {get;}
         IMomentums Momentums {get;}
@@ -23,12 +21,12 @@ namespace StrategyTemplate.ForYou.Indicators
         IVolumes Volumes {get;}
 
         /// <summary>
-        /// Set whether the indicator should use the most recent database history or custom history.
-        /// Combine startingIndex with historiesLength to customize your indicators reach.
+        /// Set whether the indicator should use database history or custom history.
+        /// Combine startingIndex with historiesLength to customize your indicators range.
         /// Useful for backtesting.
         /// </summary>
         /// <param name="historyIsCustom"></param>
         /// <param name="history"></param>
-        void SetManualHistoryToggle(bool historyIsCustom, int startingIndex = 0, IList<double> history = null);
+        void SetManualHistoryToggle(bool historyIsCustom, int startingIndex = 0, IList<IGraphBar> history = null);
     }
 }

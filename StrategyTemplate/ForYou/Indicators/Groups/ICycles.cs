@@ -52,6 +52,6 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<double>> HilbertTransformTrendVersusCycleMode(Frequency unitType, int historiesLength);
+        ITaLibOutput<IList<int>> HilbertTransformTrendVersusCycleMode(Frequency unitType, int historiesLength);
     }
 }

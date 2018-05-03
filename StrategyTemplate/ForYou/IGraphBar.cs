@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace StrategyTemplate.ForYou
 {
+    /// <summary>
+    /// Used as a value type! word to the wise.
+    /// </summary>
     public interface IGraphBar
     {
         double OpeningPrice {get;}

@@ -37,7 +37,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="slowPeriod"></param>
         /// <param name="fastPeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<double>> AbsolutePriceOscillator(Frequency unitType,Core.MAType movingAverageType, int slowPeriod, int fastPeriod);
+        ITaLibOutput<IList<double>> AbsolutePriceOscillator(Frequency unitType,Core.MAType movingAverageType, int historiesLength, int slowPeriod, int fastPeriod);
 
         /// <summary>
         /// http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:aroon

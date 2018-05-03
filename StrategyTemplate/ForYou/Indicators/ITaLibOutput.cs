@@ -9,8 +9,18 @@ namespace StrategyTemplate.ForYou.Indicators
 {
     public interface ITaLibOutput <TOutputSeries>
     {
-        TOutputSeries Series {get;}
-        Core.RetCode Outcome {get;} 
-        int BeginningIndex {get;}
+        /// <summary>
+        /// Container for the different amount of series each ta lib algorithm can return.
+        /// </summary>
+        TOutputSeries Series {get; set;}
+
+        Core.RetCode Outcome {get; set;} 
+
+        /// <summary>
+        /// equivalent to ta lib's outBegIdx.
+        /// </summary>
+        int AlgorithmsBeginningIndex {get; set;}
+
+        bool HistoryWasCustom {get; set;}
     }
 }
