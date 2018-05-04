@@ -57,7 +57,7 @@ namespace StrategyTemplate.Documentation
             typeof(Convert), 
             typeof(IList<>),
             typeof(IEnumerable<>),
-            typeof(IEnumerator<>)
+            typeof(IEnumerator<>),
         };
 
         public static HashSet<string> Namespaces = new HashSet<string> {

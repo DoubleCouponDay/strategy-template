@@ -10,7 +10,7 @@ namespace StrategyTemplate.ForYou.Indicators
 {
     public interface Iindicators
     {
-        IList<IGraphBar> CurrentHistory {get;}
+        IList<GraphBar> CurrentHistory {get;}
 
         ICycles Cycles {get;}
         IMomentums Momentums {get;}
@@ -27,6 +27,6 @@ namespace StrategyTemplate.ForYou.Indicators
         /// </summary>
         /// <param name="historyIsCustom"></param>
         /// <param name="history"></param>
-        void SetManualHistoryToggle(bool historyIsCustom, int startingIndex = 0, IList<IGraphBar> history = null);
+        void SetManualHistoryToggle(bool historyIsCustom, int startingIndex = 0, IList<GraphBar> history = null);
     }
 }
