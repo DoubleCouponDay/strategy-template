@@ -226,7 +226,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="slowKPeriod"></param>
         /// <param name="slowDPeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<(IList<double> slowK, IList<double> slowD)>Stochastic(Frequency unitType,Core.MAType slowKMaType, Core.MAType slowDMaType, int historiesLength,int fastKPeriod, int slowKPeriod, int slowDPeriod);
+        ITaLibOutput<(IList<double> slowK, IList<double> slowD)>Stochastic(Frequency unitType,Core.MAType slowKMaType, Core.MAType slowDMaType, int historiesLength, int fastKPeriod, int slowKPeriod, int slowDPeriod);
 
         /// <summary>
         /// https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/fast-stochastic

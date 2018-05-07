@@ -21,6 +21,8 @@ namespace StrategyTemplate.ForYou.Indicators
         /// </summary>
         int AlgorithmsBeginningIndex {get; set;}
 
+        int NBElement {get; set;}
+
         bool HistoryWasCustom {get; set;}
     }
 }
