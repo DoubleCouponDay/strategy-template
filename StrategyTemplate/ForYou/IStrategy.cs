@@ -1,9 +1,16 @@
-﻿namespace StrategyTemplate.ForYou
+﻿using StrategyTemplate.ForYou.Indicators;
+
+namespace StrategyTemplate.ForYou
 {
     public interface IStrategy
     {
-        string Exchange {get;}
-        string MarketPair {get;}
-        Verdict GetStrategiesVerdict(GraphBar currentTicker);
+        /// <summary>
+        /// Parameters are tools and information provided by moon machine.
+        /// </summary>
+        /// <param name="currentTicker"></param>
+        /// <param name="taLibWrapper"></param>
+        /// <param name="currentSecondaryExposure"></param>
+        /// <returns></returns>
+        StrategiesDecision GetStrategiesVerdict(GraphBar currentTicker,Iindicators taLibWrapper, double currentSecondaryExposure);
     }
 }

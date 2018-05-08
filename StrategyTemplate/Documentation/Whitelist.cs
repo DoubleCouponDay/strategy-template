@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using TicTacTec.TA.Library;
 
 namespace StrategyTemplate.Documentation
 {
@@ -58,6 +59,7 @@ namespace StrategyTemplate.Documentation
             typeof(IList<>),
             typeof(IEnumerable<>),
             typeof(IEnumerator<>),
+            typeof(QuantityLimits)
         };
 
         public static HashSet<string> Namespaces = new HashSet<string> {
@@ -71,6 +73,7 @@ namespace StrategyTemplate.Documentation
             typeof(StrategyTemplate.ForYou.Verdict).Namespace,
             typeof(StrategyTemplate.ForYou.Indicators.Iindicators).Namespace,
             typeof(StrategyTemplate.ForYou.Indicators.Groups.ICycles).Namespace,
+            typeof(TicTacTec.TA.Library.Core).Namespace
         };
     }
 }
