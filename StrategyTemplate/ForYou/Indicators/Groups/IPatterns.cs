@@ -63,7 +63,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="penetration"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<int>> AbandonedBaby(Frequency unitType,int historiesLength, int penetration);
+        ITaLibOutput<IList<int>> AbandonedBaby(Frequency unitType,int historiesLength, int penetration = 0);
 
         /// <summary>
         /// https://www.investopedia.com/terms/a/advance-block.asp
@@ -121,7 +121,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="penetration"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<int>> DarkCloudCover(Frequency unitType,int historiesLength, int penetration);
+        ITaLibOutput<IList<int>> DarkCloudCover(Frequency unitType,int historiesLength, int penetration = 0);
 
         /// <summary>
         /// http://www.ino.com/blog/2011/05/using-the-doji-indicator-to-determine-a-market-trend/#.WulMZSARXIU
@@ -162,7 +162,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="penetration"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<int>> EveningDojiStar(Frequency unitType,int historiesLength, int penetration);
+        ITaLibOutput<IList<int>> EveningDojiStar(Frequency unitType,int historiesLength, int penetration = 0);
 
         /// <summary>
         /// https://www.investopedia.com/terms/e/eveningstar.asp
@@ -171,7 +171,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="penetration"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<int>> EveningStar(Frequency unitType,int historiesLength, int penetration);
+        ITaLibOutput<IList<int>> EveningStar(Frequency unitType,int historiesLength, int penetration = 0);
 
         /// <summary>
         /// https://www.investopedia.com/terms/u/updown-gap-sidebyside-white-lines.asp
@@ -332,7 +332,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="penetration"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<int>> MatHold(Frequency unitType,int historiesLength, int penetration);
+        ITaLibOutput<IList<int>> MatHold(Frequency unitType,int historiesLength, int penetration = 0);
 
         /// <summary>
         /// http://www.candlestickchart.com/indicators/1129.html
@@ -341,7 +341,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="penetration"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<int>> MorningDojiStar(Frequency unitType,int historiesLength, int penetration);
+        ITaLibOutput<IList<int>> MorningDojiStar(Frequency unitType,int historiesLength, int penetration = 0);
 
         /// <summary>
         /// https://www.investopedia.com/terms/m/morningstar.asp
@@ -349,7 +349,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<int>> MorningStar(Frequency unitType,int historiesLength, int penetration);
+        ITaLibOutput<IList<int>> MorningStar(Frequency unitType,int historiesLength, int penetration = 0);
 
         /// <summary>
         /// https://www.investopedia.com/terms/n/neck-pattern.asp

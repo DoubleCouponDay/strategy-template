@@ -24,7 +24,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="fastPeriod"></param>
         /// <param name="slowPeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<double>> ChaikinADOscillator(Frequency unitType,int historiesLength,int fastPeriod, int slowPeriod);
+        ITaLibOutput<IList<double>> ChaikinADOscillator(Frequency unitType,int historiesLength,int fastPeriod = 3, int slowPeriod = 10);
 
         /// <summary>
         /// http://www.stockcharts.com/school/doku.php?id=chart_school:technical_indicators:on_balance_volume_obv

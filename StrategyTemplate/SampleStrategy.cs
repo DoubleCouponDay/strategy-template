@@ -12,35 +12,40 @@ namespace StrategyTemplate.EntryPoint
             Iindicators taLibWrapper,
             double currentSecondaryExposure)
         {
-            bool trendVerdict = false;
-            bool stochRsiVerdict = false;
-            bool boolbandsVerdict = false;
+            bool macdVerdict = false;
+            bool onBalanceVerdict = false;
+            bool RsiVerdict = false;
 
-            ITaLibOutput<IList<double>> ema100 = taLibWrapper.OverlapStudies
-                .ExponentialMovingAverage(Frequency.DAY, 
-                historiesLength: (int)QuantityLimits.HISTORY_LENGTH, 
-                timePeriod: 100);
+            //ITaLibOutput<(IList<double> macd, IList<double> macdSignal, IList<double> macdHistory)> macd = taLibWrapper.Momentums
+            //    .MovingAverageConvergenceDivergence(Frequency.DAY, 
+            //    Core.MAType.Ema,
+            //    historiesLength: (int)QuantityLimits.HISTORY_LENGTH, 
+            //    fastPeriod: 12,
+            //    slowPeriod: 26,
+            //    signalPeriod: 20,
+            //    );
 
-            ITaLibOutput<(IList<double> fastK, IList<double> fastD)> stochRsi = taLibWrapper.Momentums
-                .StochasticRelativeStrengthIndex(Frequency.DAY, 
-                    Core.MAType.Ema, 
+            ITaLibOutput<IList<double>> onBalance = taLibWrapper.Volumes
+                .OnBalanceVolume(Frequency.DAY, 
+                historiesLength: 1);
+
+            ITaLibOutput<IList<double>> rsi = taLibWrapper.Momentums
+                .RelativeStrengthIndex(Frequency.DAY, 
                     historiesLength: (int)QuantityLimits.HISTORY_LENGTH, 
-                    timePeriod: 100, 
-                    fastKPeriod: 20,
-                    fastDPeriod: 20);
+                    timePeriod: 100);
 
-            ITaLibOutput<(IList<double> upperBand, IList<double> middleBand, IList<double> lowerBand)> bollBands = taLibWrapper.OverlapStudies
-                .BollingerBands(Frequency.DAY, 
-                    Core.MAType.Ema, 
-                    historiesLength: (int)QuantityLimits.HISTORY_LENGTH, 
-                    timePeriod: 100, 
-                    nbDevUp: 20,
-                    nbDevDown: 20);
+            //ITaLibOutput<(IList<double> upperBand, IList<double> middleBand, IList<double> lowerBand)> bollBands = taLibWrapper.OverlapStudies
+            //    .BollingerBands(Frequency.DAY, 
+            //        Core.MAType.Ema, 
+            //        historiesLength: 1, 
+            //        timePeriod: 100, 
+            //        nbDevUp: 20,
+            //        nbDevDown: 20);
 
-            var emaList = new List<double> (ema100.Series);
-            var stochRsiList = new List<double> (stochRsi.Series.fastK);
-            var upperBandList = new List<double> (bollBands.Series.upperBand);
-            var lowerBandList = new List<double> (bollBands.Series.lowerBand);
+            //var emaList = new List<double> (ema100.Series);
+            //var stochRsiList = new List<double> (stochRsi.Series.fastK);
+            //var upperBandList = new List<double> (bollBands.Series.upperBand);
+            //var lowerBandList = new List<double> (bollBands.Series.lowerBand);
 
             if(true)
             {
