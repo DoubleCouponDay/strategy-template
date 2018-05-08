@@ -36,6 +36,15 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         ITaLibOutput<IList<double>> LinearRegression(Frequency unitType,int historiesLength, int timePeriod);
 
         /// <summary>
+        /// https://www.tradingtechnologies.com/help/x-study/technical-indicator-definitions/linear-regression-angle-lra/
+        /// </summary>
+        /// <param name="unitType"></param>
+        /// <param name="historiesLength"></param>
+        /// <param name="timePeriod"></param>
+        /// <returns></returns>
+        ITaLibOutput<IList<double>> LinearRegressionAngle(Frequency unitType,int historiesLength, int timePeriod);
+
+        /// <summary>
         /// https://www.tradingtechnologies.com/help/x-study/technical-indicator-definitions/linear-regression-intercept-lri/
         /// </summary>
         /// <param name="unitType"></param>
@@ -58,9 +67,9 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// </summary>
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
-        /// <param name="dbDev"></param>
+        /// <param name="NbDev"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<double>> StandardDeviation(Frequency unitType,int historiesLength, int dbDev);
+        ITaLibOutput<IList<double>> StandardDeviation(Frequency unitType,int historiesLength, int timePeriod, int NbDev);
 
         /// <summary>
         /// http://www.onlinetradingconcepts.com/TechnicalAnalysis/TimeSeriesForecast.html

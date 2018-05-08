@@ -349,7 +349,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<int>> MorningStar(Frequency unitType,int historiesLength);
+        ITaLibOutput<IList<int>> MorningStar(Frequency unitType,int historiesLength, int penetration);
 
         /// <summary>
         /// https://www.investopedia.com/terms/n/neck-pattern.asp

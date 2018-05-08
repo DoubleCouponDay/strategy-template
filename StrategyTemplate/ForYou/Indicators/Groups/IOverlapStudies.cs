@@ -81,7 +81,9 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         ITaLibOutput<(IList<double> mama, IList<double> fama)> MesaAdaptiveMovingAverage(Frequency unitType, int historiesLength, int fastLimit, int slowLimit);
 
         /// <summary>
+        /// NOTE: periodsPerPrices length must be the same as historiesLength / custom histories length
         /// https://www.danielstrading.com/education/technical-analysis-learning-center/variable-moving-average
+        /// https://stackoverflow.com/questions/48135059/ta-lib-what-is-the-idea-of-periods-in-mavp-moving-average-with-variable-peri
         /// </summary>
         /// <param name="unitType"></param>
         /// <param name="movingAverageType"></param>
@@ -89,7 +91,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="minPeriod"></param>
         /// <param name="maxPeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<double>> MovingAverageWithVariablePeriod(Frequency unitType, Core.MAType movingAverageType, int historiesLength, int minPeriod, int maxPeriod);
+        ITaLibOutput<IList<double>> MovingAverageWithVariablePeriod(Frequency unitType, Core.MAType movingAverageType, double[] periodsPerPrices, int historiesLength, int minPeriod, int maxPeriod);
 
         /// <summary>
         /// https://www.stockalyze.com/hlp/indicators/topics/overlap_studies/midpoint.html
