@@ -106,7 +106,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="slowPeriod"></param>
         /// <param name="signalPeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<(IList<double> macd, IList<double> macdSignal, IList<double> macdHistory)>MovingAverageConvergenceDivergence(Frequency unitType,Core.MAType fastMaType, Core.MAType slowMaType, Core.MAType signalMaType, int historiesLength,int fastPeriod = 12, int slowPeriod = 26,int signalPeriod = 9);
+        ITaLibOutput<(IList<double> macd, IList<double> macdSignal, IList<double> macdHistory)>MovingAverageConvergenceDivergence(Frequency unitType, int historiesLength, Core.MAType fastMaType = Core.MAType.Sma, Core.MAType slowMaType = Core.MAType.Sma, Core.MAType signalMaType = Core.MAType.Sma, int fastPeriod = 12, int slowPeriod = 26,int signalPeriod = 9);
 
         /// <summary>
         /// NOTE: The MFI function has an unstable period.

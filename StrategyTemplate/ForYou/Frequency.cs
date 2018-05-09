@@ -8,7 +8,7 @@ namespace StrategyTemplate.ForYou
 {
     public enum Frequency
     {
-        DAY,
-        HOUR,
+        DAYS,
+        HOURS,
     }
 }

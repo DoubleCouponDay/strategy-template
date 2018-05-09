@@ -11,6 +11,6 @@ namespace StrategyTemplate.ForYou
         /// <param name="taLibWrapper"></param>
         /// <param name="currentSecondaryExposure"></param>
         /// <returns></returns>
-        StrategiesDecision GetStrategiesVerdict(GraphBar currentTicker,Iindicators taLibWrapper, double currentSecondaryExposure);
+        StrategiesDecision GetStrategiesVerdict(GraphBar currentTicker,Iindicators taLibWrapper, Transaction lastTransaction, OrderBook currentOrderBook, double currentHoardedSecurityAmount, double currentSpeculatedSecurityAmount);
     }
 }
