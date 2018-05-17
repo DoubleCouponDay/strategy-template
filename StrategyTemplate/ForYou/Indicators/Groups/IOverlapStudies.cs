@@ -164,7 +164,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<double>> TripleExponentialMovingAverage(Frequency unitType, int historiesLength, int timePeriod = 30);
+        ITaLibOutput<IList<double>> TripleExponentialMovingAverage(Frequency unitType,int historiesLength,int timePeriod = 30);
 
         /// <summary>
         /// http://www.onlinetradingconcepts.com/TechnicalAnalysis/MATriangular.html
