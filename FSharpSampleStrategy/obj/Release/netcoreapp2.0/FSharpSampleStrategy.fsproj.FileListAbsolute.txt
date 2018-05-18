@@ -1,0 +1,10 @@
+C:\Users\sjsui\Desktop\git workshop\MoonMachineOpenSource\TemplateStrategy\FSharpSampleStrategy\bin\Release\netcoreapp2.0\FSharpSampleStrategy.deps.json
+C:\Users\sjsui\Desktop\git workshop\MoonMachineOpenSource\TemplateStrategy\FSharpSampleStrategy\bin\Release\netcoreapp2.0\FSharpSampleStrategy.dll
+C:\Users\sjsui\Desktop\git workshop\MoonMachineOpenSource\TemplateStrategy\FSharpSampleStrategy\bin\Release\netcoreapp2.0\StrategyTemplate.dll
+C:\Users\sjsui\Desktop\git workshop\MoonMachineOpenSource\TemplateStrategy\FSharpSampleStrategy\bin\Release\netcoreapp2.0\TA-Lib-Core.dll
+C:\Users\sjsui\Desktop\git workshop\MoonMachineOpenSource\TemplateStrategy\FSharpSampleStrategy\bin\Release\netcoreapp2.0\StrategyTemplate.pdb
+C:\Users\sjsui\Desktop\git workshop\MoonMachineOpenSource\TemplateStrategy\FSharpSampleStrategy\bin\Release\netcoreapp2.0\StrategyTemplate.xml
+C:\Users\sjsui\Desktop\git workshop\MoonMachineOpenSource\TemplateStrategy\FSharpSampleStrategy\bin\Release\netcoreapp2.0\StrategyTemplate.dll.config
+C:\Users\sjsui\Desktop\git workshop\MoonMachineOpenSource\TemplateStrategy\FSharpSampleStrategy\obj\Release\netcoreapp2.0\FSharpSampleStrategy.fsprojResolveAssemblyReference.cache
+C:\Users\sjsui\Desktop\git workshop\MoonMachineOpenSource\TemplateStrategy\FSharpSampleStrategy\obj\Release\netcoreapp2.0\FSharpSampleStrategy.fsproj.CoreCompileInputs.cache
+C:\Users\sjsui\Desktop\git workshop\MoonMachineOpenSource\TemplateStrategy\FSharpSampleStrategy\obj\Release\netcoreapp2.0\FSharpSampleStrategy.fsproj.CopyComplete
