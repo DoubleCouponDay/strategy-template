@@ -9,7 +9,7 @@ namespace StrategyTemplate.Documentation
     /// Shows all members, types, namepspaces that are available for use in a moon machine strategy.
     /// For educational purposes only.
     /// </summary>
-    public static class Whitelist
+    public class Whitelist //fixed bug where static types cannot be used as parameters
     {
         public static HashSet<MemberInfo> Members = new HashSet<MemberInfo> {
             typeof(ValueType).GetMethod("ToString"),
@@ -62,18 +62,16 @@ namespace StrategyTemplate.Documentation
             typeof(QuantityLimits)
         };
 
-        public static HashSet<string> Namespaces = new HashSet<string> {
-            typeof(System.Collections.IEnumerator).Namespace,
-            typeof(System.Collections.Generic.IEnumerable<>).Namespace,
-            typeof(System.Collections.Concurrent.ConcurrentDictionary<,>).Namespace,
-            typeof(System.Linq.Enumerable).Namespace,
-            typeof(System.Text.StringBuilder).Namespace,
-            typeof(System.Text.RegularExpressions.Regex).Namespace,
-            typeof(System.Globalization.Calendar).Namespace,
-            typeof(StrategyTemplate.ForYou.Verdict).Namespace,
-            typeof(StrategyTemplate.ForYou.Indicators.Iindicators).Namespace,
-            typeof(StrategyTemplate.ForYou.Indicators.Groups.ICycles).Namespace,
-            typeof(TicTacTec.TA.Library.Core).Namespace
+        public static HashSet<Assembly> Assemblies = new HashSet<Assembly> {
+            typeof(System.Collections.IEnumerator).Assembly,
+            typeof(System.Collections.Generic.IEnumerable<>).Assembly,
+            typeof(System.Collections.Concurrent.ConcurrentDictionary<,>).Assembly,
+            typeof(System.Linq.Enumerable).Assembly,
+            typeof(System.Text.StringBuilder).Assembly,
+            typeof(System.Text.RegularExpressions.Regex).Assembly,
+            typeof(System.Globalization.Calendar).Assembly,
+            typeof(StrategyTemplate.ForYou.Verdict).Assembly,
+            typeof(TicTacTec.TA.Library.Core).Assembly
         };
     }
 }

@@ -805,7 +805,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "FSharp.Core >= 4.3.*",
+      "FSharp.Core >= 4.3.4",
       "Microsoft.NETCore.App >= 2.0.0",
       "StrategyTemplate >= 1.0.0",
       "TA-Lib >= 0.5.0.3"
@@ -813,26 +813,23 @@
   },
   "packageFolders": {
     "C:\\Users\\sjsui\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sjsui\\Desktop\\git workshop\\MoonMachineOpenSource\\TemplateStrategy\\FSharpSampleStrategy\\FSharpSampleStrategy.fsproj",
+      "projectUniqueName": "C:\\Users\\sjsui\\Desktop\\git_workshop\\MoonMachineOpenSource\\TemplateStrategy\\FSharpSampleStrategy\\FSharpSampleStrategy.fsproj",
       "projectName": "FSharpSampleStrategy",
-      "projectPath": "C:\\Users\\sjsui\\Desktop\\git workshop\\MoonMachineOpenSource\\TemplateStrategy\\FSharpSampleStrategy\\FSharpSampleStrategy.fsproj",
+      "projectPath": "C:\\Users\\sjsui\\Desktop\\git_workshop\\MoonMachineOpenSource\\TemplateStrategy\\FSharpSampleStrategy\\FSharpSampleStrategy.fsproj",
       "packagesPath": "C:\\Users\\sjsui\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sjsui\\Desktop\\git workshop\\MoonMachineOpenSource\\TemplateStrategy\\FSharpSampleStrategy\\obj\\",
+      "outputPath": "C:\\Users\\sjsui\\Desktop\\git_workshop\\MoonMachineOpenSource\\TemplateStrategy\\FSharpSampleStrategy\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\sjsui\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -844,8 +841,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\sjsui\\Desktop\\git workshop\\MoonMachineOpenSource\\TemplateStrategy\\StrategyTemplate\\StrategyTemplate.csproj": {
-              "projectPath": "C:\\Users\\sjsui\\Desktop\\git workshop\\MoonMachineOpenSource\\TemplateStrategy\\StrategyTemplate\\StrategyTemplate.csproj"
+            "C:\\Users\\sjsui\\Desktop\\git_workshop\\MoonMachineOpenSource\\TemplateStrategy\\StrategyTemplate\\StrategyTemplate.csproj": {
+              "projectPath": "C:\\Users\\sjsui\\Desktop\\git_workshop\\MoonMachineOpenSource\\TemplateStrategy\\StrategyTemplate\\StrategyTemplate.csproj"
             }
           }
         }
@@ -856,7 +853,7 @@
         "dependencies": {
           "FSharp.Core": {
             "target": "Package",
-            "version": "[4.3.*, )"
+            "version": "[4.3.4, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",

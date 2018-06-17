@@ -10,3 +10,17 @@ C:\Users\sjsui\Desktop\git workshop\MoonMachineOpenSource\TemplateStrategy\Visua
 C:\Users\sjsui\Desktop\git workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\obj\Release\netcoreapp2.0\VisualBasicSampleStrategy.AssemblyInfoInputs.cache
 C:\Users\sjsui\Desktop\git workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\obj\Release\netcoreapp2.0\VisualBasicSampleStrategy.AssemblyInfo.vb
 C:\Users\sjsui\Desktop\git workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\obj\Release\netcoreapp2.0\VisualBasicSampleStrategy.vbproj.CopyComplete
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\bin\Release\netcoreapp2.0\VisualBasicSampleStrategy.deps.json
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\bin\Release\netcoreapp2.0\VisualBasicSampleStrategy.dll
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\bin\Release\netcoreapp2.0\VisualBasicSampleStrategy.pdb
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\bin\Release\netcoreapp2.0\StrategyTemplate.dll
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\bin\Release\netcoreapp2.0\StrategyTemplate.pdb
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\bin\Release\netcoreapp2.0\StrategyTemplate.xml
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\bin\Release\netcoreapp2.0\StrategyTemplate.dll.config
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\obj\Release\netcoreapp2.0\VisualBasicSampleStrategy.vbprojAssemblyReference.cache
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\obj\Release\netcoreapp2.0\VisualBasicSampleStrategy.vbproj.CoreCompileInputs.cache
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\obj\Release\netcoreapp2.0\VisualBasicSampleStrategy.AssemblyInfoInputs.cache
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\obj\Release\netcoreapp2.0\VisualBasicSampleStrategy.AssemblyInfo.vb
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\obj\Release\netcoreapp2.0\VisualBasicSampleStrategy.vbproj.CopyComplete
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\obj\Release\netcoreapp2.0\VisualBasicSampleStrategy.dll
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\VisualBasicSampleStrategy\obj\Release\netcoreapp2.0\VisualBasicSampleStrategy.pdb

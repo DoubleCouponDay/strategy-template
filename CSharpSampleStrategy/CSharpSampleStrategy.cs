@@ -148,7 +148,6 @@ namespace StrategyTemplate.EntryPoint
                     {
                         return currentHoard / fingersCrossedExposureDivider;
                     }
-                    break;
 
                 case Verdict.SELL:
                     Transaction lastSell = orderBook.SellOrders.LastOrDefault();

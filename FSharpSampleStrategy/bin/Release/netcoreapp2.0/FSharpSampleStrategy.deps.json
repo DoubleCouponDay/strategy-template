@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "3cb8c3d53ede0d7d8c0dd5b4610f0b1b5132ac6a"
+    "signature": "a1b8a70f8161c4bb5ac9a8416a5547777af5b4a8"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,7 +9,8 @@
       "FSharpSampleStrategy/1.0.0": {
         "dependencies": {
           "FSharp.Core": "4.3.4",
-          "StrategyTemplate": "1.0.0"
+          "StrategyTemplate": "1.0.0",
+          "TA-Lib": "0.5.0.3"
         },
         "runtime": {
           "FSharpSampleStrategy.dll": {}
@@ -64,6 +65,11 @@
           }
         }
       },
+      "TA-Lib/0.5.0.3": {
+        "runtime": {
+          "lib/TA-Lib-Core.dll": {}
+        }
+      },
       "StrategyTemplate/1.0.0": {
         "runtime": {
           "StrategyTemplate.dll": {}
@@ -83,6 +89,13 @@
       "sha512": "sha512-u2UeaUl1pt/Lktdpzq3AsaRmOV1mOiQaSbZgYqQQYuqBSjnILWemetff4xMZIAZi0241jlIkcrJQsU5PlLwIJA==",
       "path": "fsharp.core/4.3.4",
       "hashPath": "fsharp.core.4.3.4.nupkg.sha512"
+    },
+    "TA-Lib/0.5.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-K5ifRFWu0N42b1DojETxv5zS88tv/bivAcFqYJKqt8afYKyg8mJt4gEb/uNFlISplXBgSe3GLDYckTxRusDLsQ==",
+      "path": "ta-lib/0.5.0.3",
+      "hashPath": "ta-lib.0.5.0.3.nupkg.sha512"
     },
     "StrategyTemplate/1.0.0": {
       "type": "project",

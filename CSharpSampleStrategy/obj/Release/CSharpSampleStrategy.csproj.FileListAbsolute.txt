@@ -1,0 +1,13 @@
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\CSharpSampleStrategy\bin\Release\CSharpSampleStrategy.dll.config
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\CSharpSampleStrategy\bin\Release\CSharpSampleStrategy.dll
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\CSharpSampleStrategy\bin\Release\CSharpSampleStrategy.pdb
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\CSharpSampleStrategy\bin\Release\StrategyTemplate.dll
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\CSharpSampleStrategy\bin\Release\TA-Lib-Core.dll
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\CSharpSampleStrategy\bin\Release\StrategyTemplate.pdb
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\CSharpSampleStrategy\bin\Release\StrategyTemplate.xml
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\CSharpSampleStrategy\bin\Release\StrategyTemplate.dll.config
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\CSharpSampleStrategy\obj\Release\CSharpSampleStrategy.csprojAssemblyReference.cache
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\CSharpSampleStrategy\obj\Release\CSharpSampleStrategy.csproj.CoreCompileInputs.cache
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\CSharpSampleStrategy\obj\Release\CSharpSampleStrategy.csproj.CopyComplete
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\CSharpSampleStrategy\obj\Release\CSharpSampleStrategy.dll
+C:\Users\sjsui\Desktop\git_workshop\MoonMachineOpenSource\TemplateStrategy\CSharpSampleStrategy\obj\Release\CSharpSampleStrategy.pdb

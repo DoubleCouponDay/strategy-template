@@ -700,26 +700,23 @@
   },
   "packageFolders": {
     "C:\\Users\\sjsui\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sjsui\\Desktop\\git workshop\\MoonMachineOpenSource\\TemplateStrategy\\VisualBasicSampleStrategy\\VisualBasicSampleStrategy.vbproj",
+      "projectUniqueName": "C:\\Users\\sjsui\\Desktop\\git_workshop\\MoonMachineOpenSource\\TemplateStrategy\\VisualBasicSampleStrategy\\VisualBasicSampleStrategy.vbproj",
       "projectName": "VisualBasicSampleStrategy",
-      "projectPath": "C:\\Users\\sjsui\\Desktop\\git workshop\\MoonMachineOpenSource\\TemplateStrategy\\VisualBasicSampleStrategy\\VisualBasicSampleStrategy.vbproj",
+      "projectPath": "C:\\Users\\sjsui\\Desktop\\git_workshop\\MoonMachineOpenSource\\TemplateStrategy\\VisualBasicSampleStrategy\\VisualBasicSampleStrategy.vbproj",
       "packagesPath": "C:\\Users\\sjsui\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sjsui\\Desktop\\git workshop\\MoonMachineOpenSource\\TemplateStrategy\\VisualBasicSampleStrategy\\obj\\",
+      "outputPath": "C:\\Users\\sjsui\\Desktop\\git_workshop\\MoonMachineOpenSource\\TemplateStrategy\\VisualBasicSampleStrategy\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\sjsui\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -731,8 +728,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\sjsui\\Desktop\\git workshop\\MoonMachineOpenSource\\TemplateStrategy\\StrategyTemplate\\StrategyTemplate.csproj": {
-              "projectPath": "C:\\Users\\sjsui\\Desktop\\git workshop\\MoonMachineOpenSource\\TemplateStrategy\\StrategyTemplate\\StrategyTemplate.csproj"
+            "C:\\Users\\sjsui\\Desktop\\git_workshop\\MoonMachineOpenSource\\TemplateStrategy\\StrategyTemplate\\StrategyTemplate.csproj": {
+              "projectPath": "C:\\Users\\sjsui\\Desktop\\git_workshop\\MoonMachineOpenSource\\TemplateStrategy\\StrategyTemplate\\StrategyTemplate.csproj"
             }
           }
         }
