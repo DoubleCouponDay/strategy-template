@@ -8,7 +8,7 @@ using System;
 
 namespace StrategyTemplate.EntryPoint
 {
-    class SampleStrategy : IStrategy
+    public class CSharpSampleStrategy : IStrategy
     {
         int conditionWindowHours = 48;
 

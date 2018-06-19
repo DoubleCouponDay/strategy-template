@@ -19,6 +19,7 @@ namespace StrategyTemplate.Documentation
         };
 
         public static HashSet<Type> Types = new HashSet<Type> {
+            typeof(IList<>),
             typeof(int),
             typeof(short),
             typeof(long),
@@ -56,13 +57,12 @@ namespace StrategyTemplate.Documentation
             typeof(BitConverter), 
             typeof(Random),
             typeof(Convert), 
-            typeof(IList<>),
             typeof(IEnumerable<>),
             typeof(IEnumerator<>),
-            typeof(QuantityLimits)
+            typeof(QuantityLimits),            
         };
 
-        public static HashSet<Assembly> Assemblies = new HashSet<Assembly> {
+        public static HashSet<Assembly> standardlibraryassemblies = new HashSet<Assembly> {
             typeof(System.Collections.IEnumerator).Assembly,
             typeof(System.Collections.Generic.IEnumerable<>).Assembly,
             typeof(System.Collections.Concurrent.ConcurrentDictionary<,>).Assembly,
@@ -70,8 +70,12 @@ namespace StrategyTemplate.Documentation
             typeof(System.Text.StringBuilder).Assembly,
             typeof(System.Text.RegularExpressions.Regex).Assembly,
             typeof(System.Globalization.Calendar).Assembly,
+        };
+
+        public static HashSet<Assembly> thirdpartyassemblies = new HashSet<Assembly>
+        {
             typeof(StrategyTemplate.ForYou.Verdict).Assembly,
-            typeof(TicTacTec.TA.Library.Core).Assembly
+            typeof(TicTacTec.TA.Library.Core).Assembly,
         };
     }
 }
