@@ -2,3 +2,11 @@ StrategyTemplate/bin/
 StrategyTemplate/obj/
 .vs/
 packages/
+
+**/bin/**
+**/obj/**
+**packages/
+**/.vs/
+*.user
+*.pdb
+*.cache
