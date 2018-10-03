@@ -5,12 +5,24 @@ namespace StrategyTemplate.ForYou
     public interface IStrategy
     {
         /// <summary>
-        /// Parameters are tools and information provided by moon machine.
+        /// These parameters are tools and information provided by moon machine.
         /// </summary>
         /// <param name="currentTicker"></param>
         /// <param name="taLibWrapper"></param>
-        /// <param name="currentSecondaryExposure"></param>
+        /// <param name="lastTransaction"></param>
+        /// <param name="currentOrderBook"></param>
+        /// <param name="currentHoardedSecurityAmount"></param>
+        /// <param name="currentSpeculatedSecurityAmount"></param>
+        /// <param name="feepercentage"></param>
         /// <returns></returns>
-        StrategiesDecision GetStrategiesVerdict(GraphBar currentTicker,Iindicators taLibWrapper, Transaction lastTransaction, OrderBook currentOrderBook, double currentHoardedSecurityAmount, double currentSpeculatedSecurityAmount);
+        StrategiesDecision GetStrategiesVerdict(
+            GraphBar currentTicker,
+            Iindicators taLibWrapper, 
+            Transaction lastTransaction, 
+            OrderBook currentOrderBook, 
+            double currentHoardedSecurityAmount, 
+            double currentSpeculatedSecurityAmount,
+            double feepercentage
+        );
     }
 }

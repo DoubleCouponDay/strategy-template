@@ -1,10 +1,10 @@
-StrategyTemplate/bin/
-StrategyTemplate/obj/
 .vs/
 packages/
 
-**/bin/**
-**/obj/**
+**/bin/
+**/obj/
+**/debug/
+**/release/
 **packages/
 **/.vs/
 *.user
