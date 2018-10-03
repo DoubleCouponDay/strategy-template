@@ -17,7 +17,8 @@ namespace StrategyTemplate.EntryPoint
             Transaction lastTransaction,
             OrderBook currentOrderBook,
             double currentHoardedSecurityAmount,
-            double currentSpeculatedSecurityAmount)
+            double currentSpeculatedSecurityAmount,
+            double feepercentage)
         {
             //Get the indicators
             var macd = taLibWrapper.Momentums
