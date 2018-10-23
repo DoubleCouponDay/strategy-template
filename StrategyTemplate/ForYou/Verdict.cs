@@ -1,9 +1,20 @@
-﻿namespace StrategyTemplate.ForYou
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace StrategyTemplate.ForYou
 {
-    public enum Verdict
+    public struct Verdict
     {
-        HOLD,
-        BUY, 
-        SELL,
+        public MarketAction action {get; private set; }
+        public decimal ammounttocommit {get; private set;}
+
+        public Verdict(MarketAction verdict, decimal percentageToCommit)
+        {
+            this.action = verdict;
+            this.ammounttocommit = percentageToCommit;
+        }
     }
 }

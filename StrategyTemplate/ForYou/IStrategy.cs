@@ -15,14 +15,14 @@ namespace StrategyTemplate.ForYou
         /// <param name="currentSpeculatedSecurityAmount"></param>
         /// <param name="feepercentage"></param>
         /// <returns></returns>
-        StrategiesDecision GetStrategiesVerdict(
+        Verdict GetStrategiesVerdict(
             GraphBar currentTicker,
             Iindicators taLibWrapper, 
-            Transaction lastTransaction, 
+            transaction lastTransaction, 
             OrderBook currentOrderBook, 
-            double currentHoardedSecurityAmount, 
-            double currentSpeculatedSecurityAmount,
-            double feepercentage
+            decimal currentHoardedSecurityAmount, 
+            decimal currentSpeculatedSecurityAmount,
+            decimal feepercentage
         );
     }
 }

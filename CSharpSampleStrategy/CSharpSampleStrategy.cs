@@ -12,13 +12,13 @@ namespace StrategyTemplate.EntryPoint
     {
         int conditionWindowHours = 48;
 
-        public StrategiesDecision GetStrategiesVerdict(GraphBar currentTicker,
+        public Verdict GetStrategiesVerdict(GraphBar currentTicker,
             Iindicators taLibWrapper,
-            Transaction lastTransaction,
+            transaction lastTransaction,
             OrderBook currentOrderBook,
-            double currentHoardedSecurityAmount,
-            double currentSpeculatedSecurityAmount,
-            double feepercentage)
+            decimal currentHoardedSecurityAmount,
+            decimal currentSpeculatedSecurityAmount,
+            decimal feepercentage)
         {
             //Get the indicators
             var macd = taLibWrapper.Momentums
@@ -35,9 +35,9 @@ namespace StrategyTemplate.EntryPoint
                     historiesLength: conditionWindowHours);
 
             //filter macd results to the past two days
-            IList<double> filteredMacd = NeutralizeDataBeyondTwoDays(macd.Series.macd, macd.NBElement);
-            IList<double> filteredHistory = NeutralizeDataBeyondTwoDays(macd.Series.macdHistory, macd.NBElement);
-            IList<double> filteredSignal = NeutralizeDataBeyondTwoDays(macd.Series.macdSignal, macd.NBElement);
+            IList<decimal> filteredMacd = NeutralizeDataBeyondTwoDays(macd.Series.macd, macd.NBElement);
+            IList<decimal> filteredHistory = NeutralizeDataBeyondTwoDays(macd.Series.macdHistory, macd.NBElement);
+            IList<decimal> filteredSignal = NeutralizeDataBeyondTwoDays(macd.Series.macdSignal, macd.NBElement);
             macd.Series = (macd: filteredMacd, macdSignal: filteredSignal, macdHistory: filteredHistory);
 
             //get extra data required
@@ -86,23 +86,23 @@ namespace StrategyTemplate.EntryPoint
                 macdConditionsOccuredBeforeStochs)
 
             {
-                double sellablAmount = DetermineSafeExposureAmount(currentOrderBook, Verdict.BUY, currentHoardedSecurityAmount, currentSpeculatedSecurityAmount);
-                return new StrategiesDecision(Verdict.BUY, sellablAmount);
+                decimal sellablAmount = DetermineSafeExposureAmount(currentOrderBook, MarketAction.BUY, currentHoardedSecurityAmount, currentSpeculatedSecurityAmount);
+                return new Verdict(MarketAction.BUY, sellablAmount);
             }
 
             else if(currentHoardedSecurityAmount != 0)
             {
-                double sellablAmount = DetermineSafeExposureAmount(currentOrderBook, Verdict.SELL, currentHoardedSecurityAmount, currentSpeculatedSecurityAmount);
-                return new StrategiesDecision(Verdict.BUY, sellablAmount);
+                decimal sellablAmount = DetermineSafeExposureAmount(currentOrderBook, MarketAction.SELL, currentHoardedSecurityAmount, currentSpeculatedSecurityAmount);
+                return new Verdict(MarketAction.BUY, sellablAmount);
             }
 
             else
             {
-                return new StrategiesDecision(Verdict.HOLD, 0);
+                return new Verdict(MarketAction.HOLD, 0);
             }
         }
 
-        IList<double> NeutralizeDataBeyondTwoDays(IList<double> data, int currentNBElement)
+        IList<decimal> NeutralizeDataBeyondTwoDays(IList<decimal> data, int currentNBElement)
         {
             bool startNeutralizing = false;
 
@@ -122,54 +122,38 @@ namespace StrategyTemplate.EntryPoint
             return data;
         }
 
-        double DetermineSafeExposureAmount(OrderBook orderBook, Verdict action, double currentHoard, double currentSpeculables)
+        decimal DetermineSafeExposureAmount(OrderBook orderBook, MarketAction action, decimal currentHoard, decimal currentSpeculables)
         {
             int fingersCrossedExposureDivider = 5;
 
             switch(action)
             {
-                case Verdict.BUY:
-                    Transaction firstBuy = orderBook.BuyOrders.FirstOrDefault();
+                case MarketAction.BUY:
+                    transaction firstBuy = orderBook.BuyOrders.FirstOrDefault();
 
-                    if(firstBuy.TransactionIsFilled)
+                    try
                     {
-                        try
-                        {
-                            double secondFirstGiven = orderBook.BuyOrders[1].GivenAmount;
-                            return Math.Abs(secondFirstGiven - firstBuy.GivenAmount);
-                        }
-
-                        catch(Exception)
-                        {
-                            return firstBuy.GivenAmount;
-                        }
+                        decimal secondFirstGiven = orderBook.BuyOrders[1].GivenAmount;
+                        return Math.Abs(secondFirstGiven - firstBuy.GivenAmount);
                     }
 
-                    else
+                    catch(Exception)
                     {
-                        return currentHoard / fingersCrossedExposureDivider;
+                        return firstBuy.GivenAmount;
                     }
 
-                case Verdict.SELL:
-                    Transaction lastSell = orderBook.SellOrders.LastOrDefault();
+                case MarketAction.SELL:
+                    transaction lastSell = orderBook.SellOrders.LastOrDefault();
 
-                    if(lastSell.TransactionIsFilled)
+                    try
                     {
-                        try
-                        {
-                            double secondLastReceived = orderBook.BuyOrders[1].ReceivedAmount;
-                            return Math.Abs(secondLastReceived - lastSell.ReceivedAmount);
-                        }
-
-                        catch(Exception)
-                        {
-                            return lastSell.ReceivedAmount;
-                        }
+                        decimal secondLastReceived = orderBook.BuyOrders[1].ReceivedAmount;
+                        return Math.Abs(secondLastReceived - lastSell.ReceivedAmount);
                     }
 
-                    else
+                    catch(Exception)
                     {
-                        return currentHoard / fingersCrossedExposureDivider;
+                        return lastSell.ReceivedAmount;
                     }
 
                 default:

@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\StrategyTemplate.xml</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ISymWrapper" />
     <Reference Include="System" />
@@ -79,10 +82,10 @@
     <Compile Include="ForYou\IStrategy.cs" />
     <Compile Include="Documentation\Whitelist.cs" />
     <Compile Include="ForYou\OrderBook.cs" />
-    <Compile Include="ForYou\StrategiesDecision.cs" />
-    <Compile Include="ForYou\Transaction.cs" />
+    <Compile Include="ForYou\transaction.cs" />
+    <Compile Include="ForYou\verdict.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ForYou\Verdict.cs" />
+    <Compile Include="ForYou\MarketAction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

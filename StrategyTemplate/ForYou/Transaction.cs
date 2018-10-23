@@ -1,74 +1,34 @@
-﻿using System;
+﻿using StrategyTemplate.ForYou;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace StrategyTemplate.ForYou
 {
-    public struct Transaction
+    /// <summary>
+    /// The point of this class is to give the user a trimmed down record within their strategy.
+    /// </summary>
+    public class transaction
     {
-        public bool TransactionIsFilled {get; private set;}
+        public string CloudTransactionId { get; set; }
 
-        public int UserId
-        {
-            get; set;
-        }
-        public string CloudTransactionId
-        {
-            get; set;
-        }
+        public MarketAction MarketAction { get; set; }
 
-        public string MarketName
-        {
-            get; set;
-        }
+        public decimal amountcommited { get; set; }
 
-        public Verdict MarketAction
-        {
-            get; set;
-        }
+        public string HoardedCurrency { get; set; }
 
-        public string SpeculatedSecuritiesName
-        {
-            get; set;
-        }
+        public string PriceCurrency { get; set; }
 
-        public string HoardedSecuritiesName
-        {
-            get; set;
-        }
+        public decimal ReceivedAmount { get; set; }
 
-        public double GivenAmount
-        {
-            get; set;
-        }
+        public decimal GivenAmount { get; set; }
 
-        public double ReceivedAmount
-        {
-            get; set;
-        }
+        public decimal CurrentExposure { get; set; }
 
-        public Transaction(
-            int userId, 
-            string cloudTransactionId, 
-            string marketName, 
-            Verdict marketAction, 
-            string speculatedSecuritiesName,
-            string hoardedSecuritiesName,
-            double givenAmount,
-            double receivedAmount,
-            double currentExposure)
-        {
-            this.TransactionIsFilled = true;
-            this.UserId = userId;
-            this.CloudTransactionId = cloudTransactionId;
-            this.MarketName = marketName;
-            this.MarketAction = marketAction;
-            this.SpeculatedSecuritiesName = speculatedSecuritiesName;
-            this.HoardedSecuritiesName = hoardedSecuritiesName;
-            this.GivenAmount = givenAmount;
-            this.ReceivedAmount = receivedAmount;
-        }
+        public DateTime Date { get; set; }
     }
 }

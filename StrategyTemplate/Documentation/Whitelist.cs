@@ -26,7 +26,7 @@ namespace StrategyTemplate.Documentation
             typeof(uint),
             typeof(ushort),
             typeof(ulong),
-            typeof(double),
+            typeof(decimal),
             typeof(float),
             typeof(bool),
             typeof(char),
@@ -74,7 +74,7 @@ namespace StrategyTemplate.Documentation
 
         public static HashSet<Assembly> thirdpartyassemblies = new HashSet<Assembly>
         {
-            typeof(StrategyTemplate.ForYou.Verdict).Assembly,
+            typeof(StrategyTemplate.ForYou.MarketAction).Assembly,
             typeof(TicTacTec.TA.Library.Core).Assembly,
         };
     }
