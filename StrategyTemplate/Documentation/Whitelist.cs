@@ -26,7 +26,7 @@ namespace StrategyTemplate.Documentation
             typeof(uint),
             typeof(ushort),
             typeof(ulong),
-            typeof(decimal),
+            typeof(double),
             typeof(float),
             typeof(bool),
             typeof(char),
