@@ -28,7 +28,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> decimalExponentialMovingAverage(Frequency unitType, int historiesLength, int timePeriod = 30);
+        ITaLibOutput<IList<decimal>> DoubleExponentialMovingAverage(Frequency unitType, int historiesLength, int timePeriod = 30);
 
         /// <summary>
         /// NOTE: The EMA function has an unstable period.
