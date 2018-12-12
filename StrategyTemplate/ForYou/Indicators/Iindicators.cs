@@ -19,14 +19,20 @@ namespace StrategyTemplate.ForYou.Indicators
         IPriceTransforms PriceTransforms {get;}
         IVolatilities Volatilities {get;}
         IVolumes Volumes {get;}
+        IStatistics Statistics { get;}
 
         /// <summary>
-        /// Set whether the indicator should use database history or custom history.
-        /// Combine startingIndex with historiesLength to customize your indicators range.
-        /// Useful for backtesting.
+        /// Set whether the indicator should use database history or custom history. updates the CurrentHistory property
         /// </summary>
         /// <param name="historyIsCustom"></param>
         /// <param name="history"></param>
-        void SetManualHistoryToggle(bool historyIsCustom, int startingIndex = 0, IList<GraphBar> history = null);
+        void ToggleManualHistoryToggle(bool historyIsCustom, IList<GraphBar> history = null);
+
+        /// <summary>
+        /// Combine startingIndex with historiesLength to customize your indicators range.
+        /// </summary>
+        /// <param name="startingindex"></param>
+        /// <param name="endindex"></param>
+        void SetManualRange(int startingindex = 0, int? endindex = null);
     }
 }

@@ -75,9 +75,7 @@ namespace StrategyTemplate.EntryPoint
                 {
                     macdConditionsOccuredBeforeStochs = true;
                 }
-            }   
-
-            
+            }               
 
             //make the call
             if(stochasticKCrossedOverD &&
