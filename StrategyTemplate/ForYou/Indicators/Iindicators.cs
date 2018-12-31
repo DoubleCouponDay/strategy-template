@@ -33,6 +33,6 @@ namespace StrategyTemplate.ForYou.Indicators
         /// </summary>
         /// <param name="startingindex"></param>
         /// <param name="endindex"></param>
-        void SetManualRange(int startingindex = 0, int? endindex = null);
+        void SetManualRange(int startingindex = 0);
     }
 }
