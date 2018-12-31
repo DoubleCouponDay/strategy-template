@@ -10,5 +10,7 @@ namespace StrategyTemplate.ForYou
     {
         DAYS,
         HOURS,
+        MONTHS,
+        WEEKS
     }
 }
