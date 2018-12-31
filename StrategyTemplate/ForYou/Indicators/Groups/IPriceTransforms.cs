@@ -14,7 +14,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> AveragePrice(Frequency unitType,int historiesLength);
+        ITaLibOutput<decimal[]> AveragePrice(Frequency unitType,int historiesLength);
 
         /// <summary>
         /// https://www.realsourcebrokers.com/median-price/
@@ -22,7 +22,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> MedianPrice(Frequency unitType,int historiesLength);
+        ITaLibOutput<decimal[]> MedianPrice(Frequency unitType,int historiesLength);
 
         /// <summary>
         /// https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/typical-price
@@ -30,7 +30,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> TypicalPrice(Frequency unitType,int historiesLength);
+        ITaLibOutput<decimal[]> TypicalPrice(Frequency unitType,int historiesLength);
 
         /// <summary>
         /// https://incrediblecharts.com/indicators/weighted_close.php
@@ -38,6 +38,6 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> WeightedClosePrice(Frequency unitType,int historiesLength);
+        ITaLibOutput<decimal[]> WeightedClosePrice(Frequency unitType,int historiesLength);
     }
 }

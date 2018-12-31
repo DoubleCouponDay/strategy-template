@@ -17,7 +17,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> AverageDirectionalMovementIndex(Frequency unitType,int historiesLength,int timePeriod = 14);
+        ITaLibOutput<decimal[]> AverageDirectionalMovementIndex(Frequency unitType,int historiesLength,int timePeriod = 14);
 
         /// <summary>
         /// NOTE: The ADXR function has an unstable period.
@@ -27,7 +27,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> AverageDirectionalMovementIndexRating(Frequency unitType,int historiesLength,int timePeriod = 14);
+        ITaLibOutput<decimal[]> AverageDirectionalMovementIndexRating(Frequency unitType,int historiesLength,int timePeriod = 14);
 
         /// <summary>
         /// https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/apo
@@ -37,7 +37,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="slowPeriod"></param>
         /// <param name="fastPeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> AbsolutePriceOscillator(Frequency unitType, int historiesLength, Core.MAType movingAverageType = Core.MAType.Sma, int slowPeriod = 26, int fastPeriod = 12);
+        ITaLibOutput<decimal[]> AbsolutePriceOscillator(Frequency unitType, int historiesLength, Core.MAType movingAverageType = Core.MAType.Sma, int slowPeriod = 26, int fastPeriod = 12);
 
         /// <summary>
         /// http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:aroon
@@ -46,7 +46,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<(IList<decimal> aroonDown, IList<decimal> aroonUp)> Aroon(Frequency unitType,int historiesLength,int timePeriod = 14);
+        ITaLibOutput<(decimal[] aroonDown, decimal[] aroonUp)> Aroon(Frequency unitType,int historiesLength,int timePeriod = 14);
 
         /// <summary>
         /// https://www.investopedia.com/terms/a/aroonoscillator.asp
@@ -55,7 +55,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> AroonOscillator(Frequency unitType,int historiesLength,int timePeriod = 14);
+        ITaLibOutput<decimal[]> AroonOscillator(Frequency unitType,int historiesLength,int timePeriod = 14);
 
         /// <summary>
         /// http://tradeforextrading.com/index.php/balance-power-indicator
@@ -63,7 +63,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> BalanceOfPower(Frequency unitType,int historiesLength);
+        ITaLibOutput<decimal[]> BalanceOfPower(Frequency unitType,int historiesLength);
 
         /// <summary>
         /// https://www.investopedia.com/terms/c/commoditychannelindex.asp
@@ -72,7 +72,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> CommodityChannelIndex(Frequency unitType,int historiesLength,int timePeriod = 14);
+        ITaLibOutput<decimal[]> CommodityChannelIndex(Frequency unitType,int historiesLength,int timePeriod = 14);
 
         /// <summary>
         /// NOTE: The CMO function has an unstable period.
@@ -82,7 +82,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> ChandeMomentumOscillator(Frequency unitType,int historiesLength,int timePeriod = 14);
+        ITaLibOutput<decimal[]> ChandeMomentumOscillator(Frequency unitType,int historiesLength,int timePeriod = 14);
 
         /// <summary>
         /// NOTE: The DX function has an unstable period.
@@ -92,7 +92,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>>DirectionalMovementIndex(Frequency unitType,int historiesLength,int timePeriod = 14);
+        ITaLibOutput<decimal[]>DirectionalMovementIndex(Frequency unitType,int historiesLength,int timePeriod = 14);
 
         /// <summary>
         /// https://www.investopedia.com/terms/m/macd.asp
@@ -106,7 +106,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="slowPeriod"></param>
         /// <param name="signalPeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<(IList<decimal> macd, IList<decimal> macdSignal, IList<decimal> macdHistory)>MovingAverageConvergenceDivergence(Frequency unitType, int historiesLength, Core.MAType fastMaType = Core.MAType.Sma, Core.MAType slowMaType = Core.MAType.Sma, Core.MAType signalMaType = Core.MAType.Sma, int fastPeriod = 12, int slowPeriod = 26,int signalPeriod = 9);
+        ITaLibOutput<(decimal[] macd, decimal[] macdSignal, decimal[] macdHistory)>MovingAverageConvergenceDivergence(Frequency unitType, int historiesLength, Core.MAType fastMaType = Core.MAType.Sma, Core.MAType slowMaType = Core.MAType.Sma, Core.MAType signalMaType = Core.MAType.Sma, int fastPeriod = 12, int slowPeriod = 26,int signalPeriod = 9);
 
         /// <summary>
         /// NOTE: The MFI function has an unstable period.
@@ -116,7 +116,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>>MoneyFlowIndex(Frequency unitType,int historiesLength,int timePeriod = 14);
+        ITaLibOutput<decimal[]>MoneyFlowIndex(Frequency unitType,int historiesLength,int timePeriod = 14);
 
         /// <summary>
         /// NOTE: The MINUS_DI function has an unstable period.
@@ -126,7 +126,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>>MinusDirectionalIndicator(Frequency unitType,int historiesLength,int timePeriod = 14);
+        ITaLibOutput<decimal[]>MinusDirectionalIndicator(Frequency unitType,int historiesLength,int timePeriod = 14);
 
         /// <summary>
         /// NOTE: The MINUS_DM function has an unstable period.
@@ -136,7 +136,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>>MinusDirectionalMovement(Frequency unitType,int historiesLength,int timePeriod = 14);
+        ITaLibOutput<decimal[]>MinusDirectionalMovement(Frequency unitType,int historiesLength,int timePeriod = 14);
 
         /// <summary>
         /// https://www.investopedia.com/terms/m/momentum.asp
@@ -145,7 +145,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>>Momentum(Frequency unitType,int historiesLength,int timePeriod = 10);
+        ITaLibOutput<decimal[]>Momentum(Frequency unitType,int historiesLength,int timePeriod = 10);
 
         /// <summary>
         /// NOTE: The PLUS_DI function has an unstable period.
@@ -155,7 +155,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>>PlusDirectionalIndicator(Frequency unitType,int historiesLength,int timePeriod = 14);
+        ITaLibOutput<decimal[]>PlusDirectionalIndicator(Frequency unitType,int historiesLength,int timePeriod = 14);
 
         /// <summary>
         /// NOTE: The PLUS_DM function has an unstable period.
@@ -165,7 +165,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>>PlusDirectionalMovement(Frequency unitType,int historiesLength,int timePeriod = 14);
+        ITaLibOutput<decimal[]>PlusDirectionalMovement(Frequency unitType,int historiesLength,int timePeriod = 14);
 
         /// <summary>
         /// https://www.investopedia.com/terms/p/ppo.asp
@@ -176,7 +176,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="fastPeriod"></param>
         /// <param name="slowPeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>>PercentagePriceOscillator(Frequency unitType, int historiesLength, Core.MAType MovingAverageType = Core.MAType.Sma, int fastPeriod = 12,int slowPeriod = 26);
+        ITaLibOutput<decimal[]>PercentagePriceOscillator(Frequency unitType, int historiesLength, Core.MAType MovingAverageType = Core.MAType.Sma, int fastPeriod = 12,int slowPeriod = 26);
 
         /// <summary>
         /// https://www.investopedia.com/terms/p/pricerateofchange.asp
@@ -185,7 +185,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>>RateOfChange(Frequency unitType,int historiesLength,int timePeriod = 10);
+        ITaLibOutput<decimal[]>RateOfChange(Frequency unitType,int historiesLength,int timePeriod = 10);
 
         /// <summary>
         /// https://www.investopedia.com/terms/p/pricerateofchange.asp
@@ -194,7 +194,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>>RateOfChangePercentage(Frequency unitType,int historiesLength,int timePeriod = 10);
+        ITaLibOutput<decimal[]>RateOfChangePercentage(Frequency unitType,int historiesLength,int timePeriod = 10);
 
         /// <summary>
         /// https://www.investopedia.com/terms/p/pricerateofchange.asp
@@ -203,7 +203,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>>RateOfChangeRatio(Frequency unitType,int historiesLength,int timePeriod = 10);
+        ITaLibOutput<decimal[]>RateOfChangeRatio(Frequency unitType,int historiesLength,int timePeriod = 10);
 
         /// <summary>
         /// NOTE: The RSI function has an unstable period.
@@ -213,7 +213,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>>RelativeStrengthIndex(Frequency unitType,int historiesLength,int timePeriod = 14);
+        ITaLibOutput<decimal[]>RelativeStrengthIndex(Frequency unitType,int historiesLength,int timePeriod = 14);
 
         /// <summary>
         /// https://www.investopedia.com/terms/s/stochasticoscillator.asp
@@ -226,7 +226,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="slowKPeriod"></param>
         /// <param name="slowDPeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<(IList<decimal> slowK, IList<decimal> slowD)>Stochastic(Frequency unitType, int historiesLength, Core.MAType slowKMaType = Core.MAType.Sma, Core.MAType slowDMaType = Core.MAType.Sma, int fastKPeriod = 5, int slowKPeriod = 3, int slowDPeriod = 3);
+        ITaLibOutput<(decimal[] slowK, decimal[] slowD)>Stochastic(Frequency unitType, int historiesLength, Core.MAType slowKMaType = Core.MAType.Sma, Core.MAType slowDMaType = Core.MAType.Sma, int fastKPeriod = 5, int slowKPeriod = 3, int slowDPeriod = 3);
 
         /// <summary>
         /// https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/fast-stochastic
@@ -237,7 +237,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="fastKPeriod"></param>
         /// <param name="fastDPeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<(IList<decimal> fastK, IList<decimal> fastD)> StochasticFast(Frequency unitType, int historiesLength,  Core.MAType fastDMaType = Core.MAType.Sma, int fastKPeriod = 5, int fastDPeriod = 3);
+        ITaLibOutput<(decimal[] fastK, decimal[] fastD)> StochasticFast(Frequency unitType, int historiesLength,  Core.MAType fastDMaType = Core.MAType.Sma, int fastKPeriod = 5, int fastDPeriod = 3);
         
         /// <summary>
         /// NOTE: The STOCHRSI function has an unstable period.
@@ -250,7 +250,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="fastKPeriod"></param>
         /// <param name="fastDPeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<(IList<decimal> fastK, IList<decimal> fastD)> StochasticRelativeStrengthIndex(Frequency unitType, int historiesLength, Core.MAType fastDMaType = Core.MAType.Sma, int timePeriod = 14, int fastKPeriod = 5, int fastDPeriod = 0);
+        ITaLibOutput<(decimal[] fastK, decimal[] fastD)> StochasticRelativeStrengthIndex(Frequency unitType, int historiesLength, Core.MAType fastDMaType = Core.MAType.Sma, int timePeriod = 14, int fastKPeriod = 5, int fastDPeriod = 0);
 
         /// <summary>
         /// http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:trix
@@ -259,7 +259,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> TripleSmoothExponentialMovingAverage(Frequency unitType,int historiesLength,int timePeriod = 30);
+        ITaLibOutput<decimal[]> TripleSmoothExponentialMovingAverage(Frequency unitType,int historiesLength,int timePeriod = 30);
         
         /// <summary>
         /// https://www.stockalyze.com/hlp/indicators/topics/momentum_indicators/ultosc.html
@@ -270,7 +270,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="timePeriod2"></param>
         /// <param name="timePeriod3"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> UltimateOscillator(Frequency unitType,int historiesLength,int timePeriod1 = 7, int timePeriod2 = 14, int timePeriod3 = 28);
+        ITaLibOutput<decimal[]> UltimateOscillator(Frequency unitType,int historiesLength,int timePeriod1 = 7, int timePeriod2 = 14, int timePeriod3 = 28);
 
         /// <summary>
         /// https://www.investopedia.com/terms/w/williamsr.asp
@@ -279,6 +279,6 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> WilliamsR(Frequency unitType,int historiesLength,int timePeriod = 14);
+        ITaLibOutput<decimal[]> WilliamsR(Frequency unitType,int historiesLength,int timePeriod = 14);
     }
 }

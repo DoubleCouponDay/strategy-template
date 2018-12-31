@@ -35,9 +35,9 @@ namespace StrategyTemplate.EntryPoint
                     historiesLength: conditionWindowHours);
 
             //filter macd results to the past two days
-            IList<decimal> filteredMacd = NeutralizeDataBeyondTwoDays(macd.Series.macd, macd.NBElement);
-            IList<decimal> filteredHistory = NeutralizeDataBeyondTwoDays(macd.Series.macdHistory, macd.NBElement);
-            IList<decimal> filteredSignal = NeutralizeDataBeyondTwoDays(macd.Series.macdSignal, macd.NBElement);
+            decimal[] filteredMacd = NeutralizeDataBeyondTwoDays(macd.Series.macd, macd.NBElement);
+            decimal[] filteredHistory = NeutralizeDataBeyondTwoDays(macd.Series.macdHistory, macd.NBElement);
+            decimal[] filteredSignal = NeutralizeDataBeyondTwoDays(macd.Series.macdSignal, macd.NBElement);
             macd.Series = (macd: filteredMacd, macdSignal: filteredSignal, macdHistory: filteredHistory);
 
             //get extra data required
@@ -49,7 +49,7 @@ namespace StrategyTemplate.EntryPoint
             bool stochasticKCrossedOverD = false;
             bool macdConditionsOccuredBeforeStochs = false;
 
-            for(int i = 0;i < stoch.Series.slowD.Count;i++)
+            for(int i = 0;i < stoch.Series.slowD.Count();i++)
             {
                 if(stoch.Series.slowK[i] > stoch.Series.slowD[i])
                 {
@@ -57,7 +57,7 @@ namespace StrategyTemplate.EntryPoint
                 }
             }
 
-            for(int i = 0;i < filteredSignal.Count;i++)
+            for(int i = 0;i < filteredSignal.Count(); i++)
             {
                 if(filteredMacd[i] > filteredSignal[i])
                 {
@@ -100,7 +100,7 @@ namespace StrategyTemplate.EntryPoint
             }
         }
 
-        IList<decimal> NeutralizeDataBeyondTwoDays(IList<decimal> data, int currentNBElement)
+        decimal[] NeutralizeDataBeyondTwoDays(decimal[] data, int currentNBElement)
         {
             bool startNeutralizing = false;
 

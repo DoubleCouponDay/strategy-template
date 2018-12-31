@@ -16,7 +16,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> HilbertTransformDominantCyclePeriod(Frequency unitType, int historiesLength);
+        ITaLibOutput<decimal[]> HilbertTransformDominantCyclePeriod(Frequency unitType, int historiesLength);
 
         /// <summary>
         /// NOTE: The HT_DCPHASE function has an unstable period.
@@ -25,7 +25,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<decimal>> HilbertTransformDominantCyclePhase(Frequency unitType, int historiesLength);
+        ITaLibOutput<decimal[]> HilbertTransformDominantCyclePhase(Frequency unitType, int historiesLength);
 
         /// <summary>
         /// NOTE: The HT_PHASOR function has an unstable period.
@@ -34,7 +34,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<(IList<decimal> InPhase, IList<decimal> Quadrature)> HilbertTransformPhasorComponents(Frequency unitType, int historiesLength);
+        ITaLibOutput<(decimal[] InPhase, decimal[] Quadrature)> HilbertTransformPhasorComponents(Frequency unitType, int historiesLength);
 
         /// <summary>
         /// NOTE: The HT_SINE function has an unstable period.
@@ -43,7 +43,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<(IList<decimal> Sine, IList<decimal> LeadSine)> HilbertTransformSineWave(Frequency unitType, int historiesLength);
+        ITaLibOutput<(decimal[] Sine, decimal[] LeadSine)> HilbertTransformSineWave(Frequency unitType, int historiesLength);
 
         /// <summary>
         /// NOTE: The HT_TRENDMODE function has an unstable period.
@@ -52,6 +52,6 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<IList<int>> HilbertTransformTrendVersusCycleMode(Frequency unitType, int historiesLength);
+        ITaLibOutput<int[]> HilbertTransformTrendVersusCycleMode(Frequency unitType, int historiesLength);
     }
 }
