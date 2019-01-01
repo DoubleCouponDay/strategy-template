@@ -17,17 +17,17 @@ namespace StrategyTemplate.ForYou
 
         public MarketAction MarketAction { get; set; }
 
-        public decimal amountcommited { get; set; }
+        public double amountcommited { get; set; }
 
         public string HoardedCurrency { get; set; }
 
         public string PriceCurrency { get; set; }
 
-        public decimal ReceivedAmount { get; set; }
+        public double ReceivedAmount { get; set; }
 
-        public decimal GivenAmount { get; set; }
+        public double GivenAmount { get; set; }
 
-        public decimal CurrentExposure { get; set; }
+        public double CurrentExposure { get; set; }
 
         public DateTime Date { get; set; }
     }

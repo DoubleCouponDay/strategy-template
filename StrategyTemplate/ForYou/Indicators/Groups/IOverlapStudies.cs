@@ -19,16 +19,16 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="nbDevUp"></param>
         /// <param name="nbDevDown"></param>
         /// <returns></returns>
-        ITaLibOutput<(decimal[] upperBand, decimal[] middleBand, decimal[] lowerBand)> BollingerBands(Frequency unitType,  int historiesLength, Core.MAType movingAverageType = Core.MAType.Sma, int timePeriod = 5, int nbDevUp = 2, int nbDevDown = 2);
+        ITaLibOutput<(double[] upperBand, double[] middleBand, double[] lowerBand)> BollingerBands(Frequency unitType,  int historiesLength, Core.MAType movingAverageType = Core.MAType.Sma, int timePeriod = 5, int nbDevUp = 2, int nbDevDown = 2);
 
         /// <summary>
-        /// https://www.investopedia.com/articles/trading/10/decimal-exponential-moving-average.asp
+        /// https://www.investopedia.com/articles/trading/10/double-exponential-moving-average.asp
         /// </summary>
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> DoubleExponentialMovingAverage(Frequency unitType, int historiesLength, int timePeriod = 30);
+        ITaLibOutput<double[]> DoubleExponentialMovingAverage(Frequency unitType, int historiesLength, int timePeriod = 30);
 
         /// <summary>
         /// NOTE: The EMA function has an unstable period.
@@ -38,7 +38,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> ExponentialMovingAverage(Frequency unitType, int historiesLength, int timePeriod = 30);
+        ITaLibOutput<double[]> ExponentialMovingAverage(Frequency unitType, int historiesLength, int timePeriod = 30);
 
         /// <summary>
         /// NOTE: The HT_TRENDLINE function has an unstable period.
@@ -47,7 +47,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> HilbertTransformInstantaneousTrendline(Frequency unitType, int historiesLength);
+        ITaLibOutput<double[]> HilbertTransformInstantaneousTrendline(Frequency unitType, int historiesLength);
 
         /// <summary>
         /// NOTE: The KAMA function has an unstable period.
@@ -57,7 +57,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> KaufmanAdaptiveMovingAverage(Frequency unitType, int historiesLength, int timePeriod = 30);
+        ITaLibOutput<double[]> KaufmanAdaptiveMovingAverage(Frequency unitType, int historiesLength, int timePeriod = 30);
 
         /// <summary>
         /// https://www.investopedia.com/terms/m/movingaverage.asp
@@ -67,7 +67,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="movingAverageType"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> MovingAverage(Frequency unitType, int historiesLength, Core.MAType movingAverageType = Core.MAType.Sma, int timePeriod = 30);
+        ITaLibOutput<double[]> MovingAverage(Frequency unitType, int historiesLength, Core.MAType movingAverageType = Core.MAType.Sma, int timePeriod = 30);
 
         /// <summary>
         /// NOTE: The MAMA function has an unstable period.
@@ -78,7 +78,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="fastLimit"></param>
         /// <param name="slowLimit"></param>
         /// <returns></returns>
-        ITaLibOutput<(decimal[] mama, decimal[] fama)> MesaAdaptiveMovingAverage(Frequency unitType, int historiesLength, int fastLimit = 0, int slowLimit = 0);
+        ITaLibOutput<(double[] mama, double[] fama)> MesaAdaptiveMovingAverage(Frequency unitType, int historiesLength, int fastLimit = 0, int slowLimit = 0);
 
         /// <summary>
         /// NOTE: periodsPerPrices length must be the same as historiesLength / custom histories length
@@ -91,7 +91,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="minPeriod"></param>
         /// <param name="maxPeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> MovingAverageWithVariablePeriod(Frequency unitType, decimal[] periodsPerPrices, int historiesLength, Core.MAType movingAverageType = Core.MAType.Sma, int minPeriod = 2, int maxPeriod = 30);
+        ITaLibOutput<double[]> MovingAverageWithVariablePeriod(Frequency unitType, double[] periodsPerPrices, int historiesLength, Core.MAType movingAverageType = Core.MAType.Sma, int minPeriod = 2, int maxPeriod = 30);
 
         /// <summary>
         /// https://www.stockalyze.com/hlp/indicators/topics/overlap_studies/midpoint.html
@@ -100,7 +100,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> MidPointOverPeriod(Frequency unitType, int historiesLength, int timePeriod = 14);
+        ITaLibOutput<double[]> MidPointOverPeriod(Frequency unitType, int historiesLength, int timePeriod = 14);
 
         /// <summary>
         /// https://www.stockalyze.com/hlp/indicators/topics/overlap_studies/midprice.html
@@ -109,7 +109,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> MidPointPriceOverPeriod(Frequency unitType, int historiesLength, int timePeriod = 14);
+        ITaLibOutput<double[]> MidPointPriceOverPeriod(Frequency unitType, int historiesLength, int timePeriod = 14);
 
         /// <summary>
         /// http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:parabolic_sar
@@ -119,7 +119,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="acceleration"></param>
         /// <param name="maximum"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> ParabolicSar(Frequency unitType, int historiesLength, int acceleration = 0, int maximum = 0);
+        ITaLibOutput<double[]> ParabolicSar(Frequency unitType, int historiesLength, int acceleration = 0, int maximum = 0);
 
         /// <summary>
         /// https://www.stockalyze.com/hlp/indicators/topics/overlap_studies/sarext.html
@@ -135,7 +135,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="accelerationshort"></param>
         /// <param name="accelerationmaxshort"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> ParabolicSarExtended(Frequency unitType, int historiesLength, int startvalue = 0, int offsetonreverse = 0, int accelerationinitlong = 0, int accelerationlong = 0, int accelerationmaxlong = 0, int accelerationinitshort = 0, int accelerationshort = 0, int accelerationmaxshort = 0);
+        ITaLibOutput<double[]> ParabolicSarExtended(Frequency unitType, int historiesLength, int startvalue = 0, int offsetonreverse = 0, int accelerationinitlong = 0, int accelerationlong = 0, int accelerationmaxlong = 0, int accelerationinitshort = 0, int accelerationshort = 0, int accelerationmaxshort = 0);
 
         /// <summary>
         /// https://www.investopedia.com/terms/s/sma.asp
@@ -144,7 +144,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> SimpleMovingAverage(Frequency unitType, int historiesLength, int timePeriod = 30);
+        ITaLibOutput<double[]> SimpleMovingAverage(Frequency unitType, int historiesLength, int timePeriod = 30);
 
         /// <summary>
         /// NOTE: The T3 function has an unstable period.
@@ -155,7 +155,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="timePeriod"></param>
         /// <param name="vFactor"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> TripleExponentialMovingAverageT3(Frequency unitType, int historiesLength, int timePeriod = 5, int vFactor = 0);
+        ITaLibOutput<double[]> TripleExponentialMovingAverageT3(Frequency unitType, int historiesLength, int timePeriod = 5, int vFactor = 0);
 
         /// <summary>
         /// https://www.investopedia.com/terms/t/triple-exponential-moving-average.asp
@@ -164,7 +164,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> TripleExponentialMovingAverage(Frequency unitType,int historiesLength,int timePeriod = 30);
+        ITaLibOutput<double[]> TripleExponentialMovingAverage(Frequency unitType,int historiesLength,int timePeriod = 30);
 
         /// <summary>
         /// http://www.onlinetradingconcepts.com/TechnicalAnalysis/MATriangular.html
@@ -173,7 +173,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> TriangularMovingAverage(Frequency unitType, int historiesLength, int timePeriod = 30);
+        ITaLibOutput<double[]> TriangularMovingAverage(Frequency unitType, int historiesLength, int timePeriod = 30);
 
         /// <summary>
         /// https://www.investopedia.com/articles/technical/060401.asp
@@ -182,6 +182,6 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> WeightedMovingAverage(Frequency unitType, int historiesLength, int timePeriod = 30);
+        ITaLibOutput<double[]> WeightedMovingAverage(Frequency unitType, int historiesLength, int timePeriod = 30);
     }
 }

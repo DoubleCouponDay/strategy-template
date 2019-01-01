@@ -15,7 +15,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> Beta(Frequency unitType,int historiesLength, int timePeriod = 5);
+        ITaLibOutput<double[]> Beta(Frequency unitType,int historiesLength, int timePeriod = 5);
 
         /// <summary>
         /// http://www.stockcharts.com/school/doku.php?id=chart_school:technical_indicators:correlation_coeffici
@@ -24,7 +24,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> PearsonsCorrelationCoefficient(Frequency unitType,int historiesLength, int timePeriod = 30);
+        ITaLibOutput<double[]> PearsonsCorrelationCoefficient(Frequency unitType,int historiesLength, int timePeriod = 30);
 
         /// <summary>
         /// https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/linear-regression
@@ -33,7 +33,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> LinearRegression(Frequency unitType,int historiesLength, int timePeriod = 14);
+        ITaLibOutput<double[]> LinearRegression(Frequency unitType,int historiesLength, int timePeriod = 14);
 
         /// <summary>
         /// https://www.tradingtechnologies.com/help/x-study/technical-indicator-definitions/linear-regression-angle-lra/
@@ -42,7 +42,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> LinearRegressionAngle(Frequency unitType,int historiesLength, int timePeriod = 14);
+        ITaLibOutput<double[]> LinearRegressionAngle(Frequency unitType,int historiesLength, int timePeriod = 14);
 
         /// <summary>
         /// https://www.tradingtechnologies.com/help/x-study/technical-indicator-definitions/linear-regression-intercept-lri/
@@ -51,7 +51,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> LinearRegressionIntercept(Frequency unitType,int historiesLength, int timePeriod = 14);
+        ITaLibOutput<double[]> LinearRegressionIntercept(Frequency unitType,int historiesLength, int timePeriod = 14);
 
         /// <summary>
         /// https://www.forexrealm.com/technical-analysis/technical-indicators/linear-regression-slope.html
@@ -60,7 +60,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> LinearRegressionSlope(Frequency unitType,int historiesLength, int timePeriod = 14);
+        ITaLibOutput<double[]> LinearRegressionSlope(Frequency unitType,int historiesLength, int timePeriod = 14);
 
         /// <summary>
         /// https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/standard-deviation
@@ -69,7 +69,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="NbDev"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> StandardDeviation(Frequency unitType,int historiesLength, int timePeriod = 5, int NbDev = 1);
+        ITaLibOutput<double[]> StandardDeviation(Frequency unitType,int historiesLength, int timePeriod = 5, int NbDev = 1);
 
         /// <summary>
         /// http://www.onlinetradingconcepts.com/TechnicalAnalysis/TimeSeriesForecast.html
@@ -78,7 +78,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> TimeSeriesForecast(Frequency unitType,int historiesLength, int timePeriod = 14);
+        ITaLibOutput<double[]> TimeSeriesForecast(Frequency unitType,int historiesLength, int timePeriod = 14);
 
         /// <summary>
         /// https://www.investopedia.com/terms/v/variance.asp
@@ -88,6 +88,6 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="timePeriod"></param>
         /// <param name="nbDev"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> Variance(Frequency unitType,int historiesLength, int timePeriod = 5, int nbDev = 1);
+        ITaLibOutput<double[]> Variance(Frequency unitType,int historiesLength, int timePeriod = 5, int nbDev = 1);
     }
 }

@@ -16,7 +16,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> HilbertTransformDominantCyclePeriod(Frequency unitType, int historiesLength);
+        ITaLibOutput<double[]> HilbertTransformDominantCyclePeriod(Frequency unitType, int historiesLength);
 
         /// <summary>
         /// NOTE: The HT_DCPHASE function has an unstable period.
@@ -25,7 +25,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> HilbertTransformDominantCyclePhase(Frequency unitType, int historiesLength);
+        ITaLibOutput<double[]> HilbertTransformDominantCyclePhase(Frequency unitType, int historiesLength);
 
         /// <summary>
         /// NOTE: The HT_PHASOR function has an unstable period.
@@ -34,7 +34,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<(decimal[] InPhase, decimal[] Quadrature)> HilbertTransformPhasorComponents(Frequency unitType, int historiesLength);
+        ITaLibOutput<(double[] InPhase, double[] Quadrature)> HilbertTransformPhasorComponents(Frequency unitType, int historiesLength);
 
         /// <summary>
         /// NOTE: The HT_SINE function has an unstable period.
@@ -43,7 +43,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<(decimal[] Sine, decimal[] LeadSine)> HilbertTransformSineWave(Frequency unitType, int historiesLength);
+        ITaLibOutput<(double[] Sine, double[] LeadSine)> HilbertTransformSineWave(Frequency unitType, int historiesLength);
 
         /// <summary>
         /// NOTE: The HT_TRENDMODE function has an unstable period.

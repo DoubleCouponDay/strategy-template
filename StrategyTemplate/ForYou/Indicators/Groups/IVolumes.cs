@@ -14,7 +14,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> ChaikinADLine(Frequency unitType,int historiesLength);
+        ITaLibOutput<double[]> ChaikinADLine(Frequency unitType,int historiesLength);
 
         /// <summary>
         /// http://stockcharts.com/school/doku.php?id=chart_school:technical_indicators:chaikin_oscillator
@@ -24,7 +24,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="fastPeriod"></param>
         /// <param name="slowPeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> ChaikinADOscillator(Frequency unitType,int historiesLength,int fastPeriod = 3, int slowPeriod = 10);
+        ITaLibOutput<double[]> ChaikinADOscillator(Frequency unitType,int historiesLength,int fastPeriod = 3, int slowPeriod = 10);
 
         /// <summary>
         /// http://www.stockcharts.com/school/doku.php?id=chart_school:technical_indicators:on_balance_volume_obv
@@ -32,6 +32,6 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> OnBalanceVolume(Frequency unitType,int historiesLength);
+        ITaLibOutput<double[]> OnBalanceVolume(Frequency unitType,int historiesLength);
     }
 }

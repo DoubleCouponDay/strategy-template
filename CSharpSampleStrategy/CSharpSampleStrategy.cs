@@ -12,13 +12,14 @@ namespace StrategyTemplate.EntryPoint
     {
         int conditionWindowHours = 48;
 
-        public Verdict GetStrategiesVerdict(GraphBar currentTicker,
+        public Verdict GetStrategiesVerdict(
+            GraphBar currentTicker,
             Iindicators taLibWrapper,
             transaction lastTransaction,
             OrderBook currentOrderBook,
-            decimal currentHoardedSecurityAmount,
-            decimal currentSpeculatedSecurityAmount,
-            decimal feepercentage)
+            double currentHoardedSecurityAmount,
+            double currentSpeculatedSecurityAmount,
+            double feepercentage)
         {
             //Get the indicators
             var macd = taLibWrapper.Momentums
@@ -35,9 +36,9 @@ namespace StrategyTemplate.EntryPoint
                     historiesLength: conditionWindowHours);
 
             //filter macd results to the past two days
-            decimal[] filteredMacd = NeutralizeDataBeyondTwoDays(macd.Series.macd, macd.NBElement);
-            decimal[] filteredHistory = NeutralizeDataBeyondTwoDays(macd.Series.macdHistory, macd.NBElement);
-            decimal[] filteredSignal = NeutralizeDataBeyondTwoDays(macd.Series.macdSignal, macd.NBElement);
+            double[] filteredMacd = NeutralizeDataBeyondTwoDays(macd.Series.macd, macd.NBElement);
+            double[] filteredHistory = NeutralizeDataBeyondTwoDays(macd.Series.macdHistory, macd.NBElement);
+            double[] filteredSignal = NeutralizeDataBeyondTwoDays(macd.Series.macdSignal, macd.NBElement);
             macd.Series = (macd: filteredMacd, macdSignal: filteredSignal, macdHistory: filteredHistory);
 
             //get extra data required
@@ -84,13 +85,13 @@ namespace StrategyTemplate.EntryPoint
                 macdConditionsOccuredBeforeStochs)
 
             {
-                decimal sellablAmount = DetermineSafeExposureAmount(currentOrderBook, MarketAction.BUY, currentHoardedSecurityAmount, currentSpeculatedSecurityAmount);
+                double sellablAmount = DetermineSafeExposureAmount(currentOrderBook, MarketAction.BUY, currentHoardedSecurityAmount, currentSpeculatedSecurityAmount);
                 return new Verdict(MarketAction.BUY, sellablAmount);
             }
 
             else if(currentHoardedSecurityAmount != 0)
             {
-                decimal sellablAmount = DetermineSafeExposureAmount(currentOrderBook, MarketAction.SELL, currentHoardedSecurityAmount, currentSpeculatedSecurityAmount);
+                double sellablAmount = DetermineSafeExposureAmount(currentOrderBook, MarketAction.SELL, currentHoardedSecurityAmount, currentSpeculatedSecurityAmount);
                 return new Verdict(MarketAction.BUY, sellablAmount);
             }
 
@@ -100,7 +101,7 @@ namespace StrategyTemplate.EntryPoint
             }
         }
 
-        decimal[] NeutralizeDataBeyondTwoDays(decimal[] data, int currentNBElement)
+        double[] NeutralizeDataBeyondTwoDays(double[] data, int currentNBElement)
         {
             bool startNeutralizing = false;
 
@@ -120,7 +121,7 @@ namespace StrategyTemplate.EntryPoint
             return data;
         }
 
-        decimal DetermineSafeExposureAmount(OrderBook orderBook, MarketAction action, decimal currentHoard, decimal currentSpeculables)
+        double DetermineSafeExposureAmount(OrderBook orderBook, MarketAction action, double currentHoard, double currentSpeculables)
         {
             int fingersCrossedExposureDivider = 5;
 
@@ -131,7 +132,7 @@ namespace StrategyTemplate.EntryPoint
 
                     try
                     {
-                        decimal secondFirstGiven = orderBook.BuyOrders[1].GivenAmount;
+                        double secondFirstGiven = orderBook.BuyOrders[1].GivenAmount;
                         return Math.Abs(secondFirstGiven - firstBuy.GivenAmount);
                     }
 
@@ -145,7 +146,7 @@ namespace StrategyTemplate.EntryPoint
 
                     try
                     {
-                        decimal secondLastReceived = orderBook.BuyOrders[1].ReceivedAmount;
+                        double secondLastReceived = orderBook.BuyOrders[1].ReceivedAmount;
                         return Math.Abs(secondLastReceived - lastSell.ReceivedAmount);
                     }
 

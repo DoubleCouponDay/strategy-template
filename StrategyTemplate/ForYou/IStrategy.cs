@@ -20,9 +20,9 @@ namespace StrategyTemplate.ForYou
             Iindicators taLibWrapper, 
             transaction lastTransaction, 
             OrderBook currentOrderBook, 
-            decimal currentHoardedSecurityAmount, 
-            decimal currentSpeculatedSecurityAmount,
-            decimal feepercentage
+            double currentHoardedSecurityAmount, 
+            double currentSpeculatedSecurityAmount,
+            double feepercentage
         );
     }
 }

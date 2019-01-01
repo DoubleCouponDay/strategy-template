@@ -16,7 +16,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> AverageTrueRange(Frequency unitType,int historiesLength, int timePeriod = 14);
+        ITaLibOutput<double[]> AverageTrueRange(Frequency unitType,int historiesLength, int timePeriod = 14);
 
         /// <summary>
         /// NOTE: The NATR function has an unstable period.
@@ -26,7 +26,7 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="historiesLength"></param>
         /// <param name="timePeriod"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> NormalizedAverageTrueRange(Frequency unitType,int historiesLength, int timePeriod = 14);
+        ITaLibOutput<double[]> NormalizedAverageTrueRange(Frequency unitType,int historiesLength, int timePeriod = 14);
 
         /// <summary>
         /// http://spreadsheetml.com/technicalindicators/truerange.shtml
@@ -34,6 +34,6 @@ namespace StrategyTemplate.ForYou.Indicators.Groups
         /// <param name="unitType"></param>
         /// <param name="historiesLength"></param>
         /// <returns></returns>
-        ITaLibOutput<decimal[]> TrueRange(Frequency unitType,int historiesLength);
+        ITaLibOutput<double[]> TrueRange(Frequency unitType,int historiesLength);
     }
 }

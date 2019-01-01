@@ -32,7 +32,7 @@ namespace StrategyTemplate.Documentation
             typeof(char),
             typeof(byte),
             typeof(sbyte),
-            typeof(decimal),
+            typeof(double),
             typeof(string),
             typeof(object),
             typeof(Type),
