@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace StrategyTemplate.ForYou
 {
+    /// <summary>
+    /// Each matches an accepted input for postgresql's EXTRACT FUNCTION's "field" parameter.
+    /// </summary>
     public enum Frequency
     {
-        DAYS,
-        HOURS,
-        MONTHS,
-        WEEKS
+        day,
+        hour,
+        month,
+        week
     }
 }

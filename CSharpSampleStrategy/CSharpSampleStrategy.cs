@@ -24,7 +24,7 @@ namespace StrategyTemplate.EntryPoint
             //Get the indicators
             var macd = taLibWrapper.Momentums
                 .MovingAverageConvergenceDivergence(
-                    unitType: Frequency.HOURS, 
+                    unitType: Frequency.hour, 
                     historiesLength: (int) QuantityLimits.HISTORY_LENGTH,
                     slowMaType: Core.MAType.Ema,
                     fastMaType: Core.MAType.Sma,
@@ -32,7 +32,7 @@ namespace StrategyTemplate.EntryPoint
 
             var stoch = taLibWrapper.Momentums
                 .Stochastic(
-                    unitType: Frequency.HOURS,
+                    unitType: Frequency.hour,
                     historiesLength: conditionWindowHours);
 
             //filter macd results to the past two days
