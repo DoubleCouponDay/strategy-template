@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>MoonMachine.StrategyTemplate</id>
+    <version>1.0.0</version>
+    <title>MoonMachine.StrategyTemplate</title>
+    <authors>doublecouponday</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A template for a moonmachine strategy</description>
+	<repository url="https://github.com/DoubleCouponDay/moonmachine.templatestrategy" ></repository>
+    <license type="file">copyleftlicense.txt</license>
+	<licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+	<files>
+		<file src="./copyleftlicense.txt" target="" />
+	</files>
+    <dependencies>
+      <dependency id="System.Collections.Immutable" version="1.3.1" />
+      <dependency id="System.Reflection.Metadata" version="1.4.2" />
+      <dependency id="TA-Lib" version="0.5.0.3" />
+    </dependencies>
+  </metadata>
+</package>

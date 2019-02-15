@@ -10,3 +10,4 @@ packages/
 *.user
 *.pdb
 *.cache
+*.nupkg
