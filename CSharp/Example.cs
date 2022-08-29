@@ -1,10 +1,6 @@
-﻿using StrategyTemplate.ForYou;
-using StrategyTemplate.ForYou.Indicators;
-using System.Collections.Generic;
-using TicTacTec.TA.Library;
+﻿using StrategyTemplate.Indicators;
+using TALib;
 using StrategyTemplate.Documentation;
-using System.Linq;
-using System;
 
 namespace StrategyTemplate.EntryPoint
 {
