@@ -1,9 +1,9 @@
-﻿namespace StrategyTemplate.ForYou
+﻿namespace StrategyTemplate
 {
     public enum MarketAction
     {
         HOLD,
-        BUY, 
+        BUY,
         SELL,
     }
 }

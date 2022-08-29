@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TicTacTec.TA.Library;
+using TALib;
 
-namespace StrategyTemplate.ForYou.Indicators.Groups
+namespace StrategyTemplate.Indicators.Groups
 {
     public interface IMomentums
     {

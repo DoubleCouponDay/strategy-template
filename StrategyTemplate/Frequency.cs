@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StrategyTemplate.ForYou
+namespace StrategyTemplate
 {
     /// <summary>
     /// Each matches an accepted input for postgresql's EXTRACT FUNCTION's "field" parameter.

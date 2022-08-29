@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StrategyTemplate.ForYou.Indicators.Groups
+namespace StrategyTemplate.Indicators.Groups
 {
     public interface IVolumes
     {

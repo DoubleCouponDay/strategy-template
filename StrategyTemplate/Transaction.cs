@@ -1,12 +1,11 @@
-﻿using StrategyTemplate.ForYou;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StrategyTemplate.ForYou
+namespace StrategyTemplate
 {
     /// <summary>
     /// The point of this class is to give the user a trimmed down record within their strategy.

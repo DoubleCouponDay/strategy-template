@@ -4,9 +4,9 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using StrategyTemplate.ForYou.Indicators.Groups;
+using StrategyTemplate.Indicators.Groups;
 
-namespace StrategyTemplate.ForYou.Indicators
+namespace StrategyTemplate.Indicators
 {
     public interface Iindicators
     {
@@ -26,7 +26,7 @@ namespace StrategyTemplate.ForYou.Indicators
         /// </summary>
         /// <param name="historyIsCustom"></param>
         /// <param name="history"></param>
-        void ToggleManualHistoryToggle(bool historyIsCustom, IList<GraphBar> history = null);
+        void ToggleManualHistoryToggle(bool historyIsCustom, List<GraphBar> history = null);
 
         /// <summary>
         /// Combine startingIndex with historiesLength to customize your indicators range.

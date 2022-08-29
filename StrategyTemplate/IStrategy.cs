@@ -1,6 +1,6 @@
-﻿using StrategyTemplate.ForYou.Indicators;
+﻿using StrategyTemplate.Indicators;
 
-namespace StrategyTemplate.ForYou
+namespace StrategyTemplate
 {
     public interface IStrategy
     {
@@ -17,10 +17,10 @@ namespace StrategyTemplate.ForYou
         /// <returns></returns>
         Verdict GetStrategiesVerdict(
             GraphBar currentTicker,
-            Iindicators taLibWrapper, 
-            transaction lastTransaction, 
-            OrderBook currentOrderBook, 
-            double currentHoardedSecurityAmount, 
+            Iindicators taLibWrapper,
+            transaction lastTransaction,
+            OrderBook currentOrderBook,
+            double currentHoardedSecurityAmount,
             double currentSpeculatedSecurityAmount,
             double feepercentage
         );

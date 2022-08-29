@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using TicTacTec.TA.Library;
+using TALib;
 
 namespace StrategyTemplate.Documentation
 {
@@ -74,8 +74,8 @@ namespace StrategyTemplate.Documentation
 
         public static HashSet<Assembly> thirdpartyassemblies = new HashSet<Assembly>
         {
-            typeof(StrategyTemplate.ForYou.MarketAction).Assembly,
-            typeof(TicTacTec.TA.Library.Core).Assembly,
+            typeof(MarketAction).Assembly,
+            typeof(TALib.Core).Assembly,
         };
     }
 }
