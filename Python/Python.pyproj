@@ -2,16 +2,22 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>1ef11067-4044-4888-81be-02f6ba4fa451</ProjectGuid>
+    <ProjectGuid>313c3efb-6b5b-418f-89aa-21c2ab078d42</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>IronPythonSampleStrategy.py</StartupFile>
-    <SearchPath>..\IronPythonSampleStrategy</SearchPath>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
-    <InterpreterId>Global|VisualStudio|Iron Python 2.7</InterpreterId>
-    <LaunchProvider>IronPython (.NET) launcher</LaunchProvider>
     <OutputPath>.</OutputPath>
-    <Name>IronPythonSampleStrategy</Name>
-    <RootNamespace>IronPythonSampleStrategy</RootNamespace>
+    <Name>PythonSampleStrategy</Name>
+    <RootNamespace>PythonSampleStrategy</RootNamespace>
+    <TestFramework>pytest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
+    <InterpreterId>Global|IronPython|3.4</InterpreterId>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,14 +28,20 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="IronPythonSampleStrategy.py" />
+    <Compile Include="Example.py" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StrategyTemplate\StrategyTemplate.csproj">
       <Name>StrategyTemplate</Name>
-      <Project>{d4f2351e-b424-4ebd-90c2-bea8b578073d}</Project>
+      <Project>{c13368e8-76b4-4344-9dcd-a0f35b459f11}</Project>
       <Private>True</Private>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|IronPython|3.4" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
