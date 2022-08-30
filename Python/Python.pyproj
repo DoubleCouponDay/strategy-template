@@ -5,12 +5,20 @@
     <Nullable>enable</Nullable>
     <ProjectGuid>{313c3efb-6b5b-418f-89aa-21c2ab078d42}</ProjectGuid>
     <SearchPath>..\StrategyTemplate\bin\Debug\net6.0</SearchPath>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Example.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StrategyTemplate\StrategyTemplate.csproj">
+      <Name>StrategyTemplate</Name>
+      <Project>{c13368e8-76b4-4344-9dcd-a0f35b459f11}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
 </Project>
