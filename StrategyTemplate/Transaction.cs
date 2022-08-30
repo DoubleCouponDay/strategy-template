@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace StrategyTemplate
 {
     /// <summary>
-    /// The point of this class is to give the user a trimmed down record within their strategy.
+    /// Provides a record of a Strategies' action.
     /// </summary>
-    public class transaction
+    public class Transaction
     {
         public string CloudTransactionId { get; set; }
 

@@ -5,24 +5,24 @@ namespace StrategyTemplate
     public interface IStrategy
     {
         /// <summary>
-        /// These parameters are tools and information provided by moon machine.
+        /// Implement a strategy which Engine U can invoke.
         /// </summary>
         /// <param name="currentTicker"></param>
-        /// <param name="taLibWrapper"></param>
+        /// <param name="indicators"></param>
         /// <param name="lastTransaction"></param>
-        /// <param name="currentOrderBook"></param>
-        /// <param name="currentHoardedSecurityAmount"></param>
-        /// <param name="currentSpeculatedSecurityAmount"></param>
-        /// <param name="feepercentage"></param>
+        /// <param name="orderBook"></param>
+        /// <param name="hoardedSecurityAmount"></param>
+        /// <param name="speculatedSecurityAmount"></param>
+        /// <param name="feePercentage"></param>
         /// <returns></returns>
         Verdict GetStrategiesVerdict(
             GraphBar currentTicker,
-            Iindicators taLibWrapper,
-            transaction lastTransaction,
-            OrderBook currentOrderBook,
-            double currentHoardedSecurityAmount,
-            double currentSpeculatedSecurityAmount,
-            double feepercentage
+            Iindicators indicators,
+            Transaction lastTransaction,
+            OrderBook orderBook,
+            double hoardedSecurityAmount,
+            double speculatedSecurityAmount,
+            double feePercentage
         );
     }
 }

@@ -8,7 +8,7 @@ namespace StrategyTemplate
 {
     public class OrderBook
     {
-        public transaction[] BuyOrders { get; set; }
-        public transaction[] SellOrders { get; set; }
+        public Transaction[] BuyOrders { get; set; }
+        public Transaction[] SellOrders { get; set; }
     }
 }
