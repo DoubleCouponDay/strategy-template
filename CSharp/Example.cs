@@ -10,15 +10,15 @@ namespace StrategyTemplate.EntryPoint
 
         public Verdict GetStrategiesVerdict(
             GraphBar currentTicker,
-            Iindicators taLibWrapper,
-            transaction lastTransaction,
-            OrderBook currentOrderBook,
-            double currentHoardedSecurityAmount,
-            double currentSpeculatedSecurityAmount,
-            double feepercentage)
+            Iindicators indicators,
+            Transaction lastTransaction,
+            OrderBook orderBook,
+            double hoardedSecurityAmount,
+            double speculatedSecurityAmount,
+            double feePercentage)
         {
             //Get the indicators
-            var macd = taLibWrapper.Momentums
+            var macd = indicators.Momentums
                 .MovingAverageConvergenceDivergence(
                     unitType: Frequency.hour, 
                     historiesLength: (int) QuantityLimits.HISTORY_LENGTH,
@@ -26,7 +26,7 @@ namespace StrategyTemplate.EntryPoint
                     fastMaType: Core.MAType.Sma,
                     signalMaType: Core.MAType.Ema);
 
-            var stoch = taLibWrapper.Momentums
+            var stoch = indicators.Momentums
                 .Stochastic(
                     unitType: Frequency.hour,
                     historiesLength: conditionWindowHours);
@@ -37,16 +37,13 @@ namespace StrategyTemplate.EntryPoint
             double[] filteredSignal = NeutralizeDataBeyondTwoDays(macd.Series.macdSignal, macd.NBElement);
             macd.Series = (macd: filteredMacd, macdSignal: filteredSignal, macdHistory: filteredHistory);
 
-            //get extra data required
-            int equilibriumLine = 50;
-
             //define the trade conditions
             bool macdCrossedAboveSignal = false;
             bool histogramCrossedAboveSignal = false;          
             bool stochasticKCrossedOverD = false;
             bool macdConditionsOccuredBeforeStochs = false;
 
-            for(int i = 0;i < stoch.Series.slowD.Count();i++)
+            for(int i = 0;i < stoch.Series.slowD.Length; i++)
             {
                 if(stoch.Series.slowK[i] > stoch.Series.slowD[i])
                 {
@@ -54,7 +51,7 @@ namespace StrategyTemplate.EntryPoint
                 }
             }
 
-            for(int i = 0;i < filteredSignal.Count(); i++)
+            for(int i = 0;i < filteredSignal.Length; i++)
             {
                 if(filteredMacd[i] > filteredSignal[i])
                 {
@@ -71,6 +68,7 @@ namespace StrategyTemplate.EntryPoint
                     stochasticKCrossedOverD == false)
                 {
                     macdConditionsOccuredBeforeStochs = true;
+                    break;
                 }
             }               
 
@@ -81,14 +79,14 @@ namespace StrategyTemplate.EntryPoint
                 macdConditionsOccuredBeforeStochs)
 
             {
-                double sellablAmount = DetermineSafeExposureAmount(currentOrderBook, MarketAction.BUY, currentHoardedSecurityAmount, currentSpeculatedSecurityAmount);
-                return new Verdict(MarketAction.BUY, sellablAmount);
+                double buyableAmount = DetermineSafeExposureAmount(orderBook, MarketAction.BUY);
+                return new Verdict(MarketAction.BUY, buyableAmount);
             }
 
-            else if(currentHoardedSecurityAmount != 0)
+            else if(hoardedSecurityAmount != 0)
             {
-                double sellablAmount = DetermineSafeExposureAmount(currentOrderBook, MarketAction.SELL, currentHoardedSecurityAmount, currentSpeculatedSecurityAmount);
-                return new Verdict(MarketAction.BUY, sellablAmount);
+                double sellableAmount = DetermineSafeExposureAmount(orderBook, MarketAction.SELL);
+                return new Verdict(MarketAction.SELL, sellableAmount);
             }
 
             else
@@ -109,7 +107,7 @@ namespace StrategyTemplate.EntryPoint
                     startNeutralizing = true;
                 }
 
-                if(startNeutralizing)
+                else if(startNeutralizing)
                 {
                     data[i] = 0;
                 }
@@ -117,42 +115,40 @@ namespace StrategyTemplate.EntryPoint
             return data;
         }
 
-        double DetermineSafeExposureAmount(OrderBook orderBook, MarketAction action, double currentHoard, double currentSpeculables)
+        double DetermineSafeExposureAmount(OrderBook orderBook, MarketAction action)
         {
-            int fingersCrossedExposureDivider = 5;
-
             switch(action)
             {
                 case MarketAction.BUY:
-                    transaction firstBuy = orderBook.BuyOrders.FirstOrDefault();
-
-                    try
+                    Transaction firstBuy = orderBook.BuyOrders[0];
+                    
+                    if(orderBook.BuyOrders.Length >= 2)
                     {
                         double secondFirstGiven = orderBook.BuyOrders[1].GivenAmount;
                         return Math.Abs(secondFirstGiven - firstBuy.GivenAmount);
                     }
 
-                    catch(Exception)
+                    else
                     {
                         return firstBuy.GivenAmount;
                     }
 
                 case MarketAction.SELL:
-                    transaction lastSell = orderBook.SellOrders.LastOrDefault();
+                    Transaction lastSell = orderBook.SellOrders[0];
 
-                    try
+                    if(orderBook.SellOrders.Length >= 2)
                     {
                         double secondLastReceived = orderBook.BuyOrders[1].ReceivedAmount;
                         return Math.Abs(secondLastReceived - lastSell.ReceivedAmount);
                     }
 
-                    catch(Exception)
+                    else
                     {
                         return lastSell.ReceivedAmount;
                     }
 
                 default:
-                    return 0; //required by compiler
+                    return 0;
             }
         }
     }
