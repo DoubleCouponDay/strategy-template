@@ -1,5 +1,6 @@
+**/env/
 .vs/
-packages/
+**/packages/
 
 **/bin/
 **/obj/
