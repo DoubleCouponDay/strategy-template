@@ -11,3 +11,4 @@ packages/
 *.pdb
 *.cache
 *.nupkg
+Python/StrategyTemplate.dll
